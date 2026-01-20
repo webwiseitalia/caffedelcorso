@@ -194,7 +194,11 @@ export default function Menu() {
         <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '3/4' }}>
           <img
             src={menuImage}
-            alt="Preparazione al bar"
+            alt="Preparazione al bar del Caffè del Corso"
+            title="Menu - Prodotti freschi e di qualità ogni giorno"
+            loading="lazy"
+            width={450}
+            height={600}
             className="w-full h-full object-cover"
           />
         </div>

@@ -112,7 +112,10 @@ export default function Hero({ lenis }) {
         <img
           ref={imageRef}
           src={heroImage}
-          alt="Caffè del Corso"
+          alt="Caffè del Corso - Interno del bar con atmosfera accogliente"
+          title="Caffè del Corso - Il tuo bar di fiducia a Boario Terme"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover"
           style={{ opacity: 0 }}
         />

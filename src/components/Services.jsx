@@ -188,7 +188,11 @@ export default function Services() {
         <div className="overflow-hidden shadow-xl" style={{ aspectRatio: '4/5' }}>
           <img
             src={serviceImage}
-            alt="Il nostro servizio"
+            alt="I nostri servizi al Caffè del Corso"
+            title="Servizi - Dalla colazione all'aperitivo, siamo qui per te"
+            loading="lazy"
+            width={400}
+            height={500}
             className="w-full h-full object-cover"
           />
         </div>

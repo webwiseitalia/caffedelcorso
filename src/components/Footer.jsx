@@ -3,6 +3,8 @@
  * Layout irregolare con elementi spostati
  */
 
+import { Link } from 'react-router-dom'
+
 export default function Footer({ lenis }) {
   const currentYear = new Date().getFullYear()
 
@@ -215,20 +217,20 @@ export default function Footer({ lenis }) {
           </p>
 
           <div className="flex items-center gap-6">
-            <a
-              href="/privacy"
+            <Link
+              to="/privacy-policy"
               className="text-mono transition-colors hover:text-[var(--color-rust)]"
               style={{ color: 'var(--color-text-muted)', opacity: 0.6 }}
             >
               Privacy Policy
-            </a>
-            <a
-              href="/cookie"
+            </Link>
+            <Link
+              to="/cookie-policy"
               className="text-mono transition-colors hover:text-[var(--color-rust)]"
               style={{ color: 'var(--color-text-muted)', opacity: 0.6 }}
             >
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

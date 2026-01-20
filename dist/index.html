@@ -19,11 +19,17 @@
     <meta property="og:url" content="https://caffedelcorso.it" />
     <meta property="og:site_name" content="Caffè del Corso" />
     <meta property="og:locale" content="it_IT" />
+    <meta property="og:image" content="https://caffedelcorso.it/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Caffè del Corso - Bar e Caffetteria a Darfo Boario Terme" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Caffè del Corso | Bar e Caffetteria a Boario Terme" />
     <meta name="twitter:description" content="Il tuo bar di fiducia nel cuore di Boario Terme. Caffè di qualità, colazioni, pranzi leggeri e drink." />
+    <meta name="twitter:image" content="https://caffedelcorso.it/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Caffè del Corso - Bar e Caffetteria a Darfo Boario Terme" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://caffedelcorso.it" />
@@ -39,7 +45,13 @@
       "@context": "https://schema.org",
       "@type": "CafeOrCoffeeShop",
       "name": "Caffè del Corso",
-      "image": "https://caffedelcorso.it/images/locale.jpg",
+      "alternateName": "Caffè del Corso Boario",
+      "description": "Il tuo bar di fiducia nel cuore di Boario Terme. Caffè di qualità, colazioni, pranzi leggeri e drink per tutta la giornata.",
+      "url": "https://caffedelcorso.it",
+      "logo": "https://caffedelcorso.it/favicon.svg",
+      "image": [
+        "https://caffedelcorso.it/og-image.jpg"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Vittorio Montiglio, 1",
@@ -48,19 +60,46 @@
         "postalCode": "25047",
         "addressCountry": "IT"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.883,
+        "longitude": 10.183
+      },
       "telephone": "+39 0364 793167",
+      "email": "info@caffedelcorso.it",
       "priceRange": "€€",
-      "servesCuisine": ["Italian", "Coffee", "Light meals"],
-      "openingHours": "Mo-Su 07:00-22:00",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": "150"
-      }
+      "servesCuisine": ["Italian", "Coffee", "Light meals", "Breakfast", "Brunch"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "07:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "21:30"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/caffedelcorsoboario/",
+        "https://facebook.com/caffedelcorso"
+      ],
+      "foundingDate": "1985",
+      "paymentAccepted": "Cash, Credit Card, Debit Card",
+      "currenciesAccepted": "EUR"
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-B642SAt6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-6On14nNg.css">
+    <script type="module" crossorigin src="/assets/index-Cz9k9UUZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C3IHpueb.css">
   </head>
   <body class="antialiased">
     <div id="root"></div>

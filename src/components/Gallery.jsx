@@ -212,7 +212,11 @@ export default function Gallery() {
               >
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} - Galleria Caffè del Corso`}
+                  title={item.title}
+                  loading="lazy"
+                  width={400}
+                  height={500}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
 
@@ -312,7 +316,11 @@ export default function Gallery() {
               >
                 <img
                   src={post.image}
-                  alt={post.alt}
+                  alt={`${post.alt} - Instagram @caffedelcorsoboario`}
+                  title="Seguici su Instagram @caffedelcorsoboario"
+                  loading="lazy"
+                  width={300}
+                  height={300}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Overlay con icona Instagram */}

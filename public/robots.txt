@@ -1,0 +1,12 @@
+# Robots.txt for Caffè del Corso
+# https://caffedelcorso.it
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://caffedelcorso.it/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /*.json$

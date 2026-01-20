@@ -196,7 +196,11 @@ export default function About() {
               <div className="overflow-hidden" style={{ aspectRatio: '4/5' }}>
                 <img
                   src={aboutImage}
-                  alt="Interno del locale"
+                  alt="Interno del Caffè del Corso - Ambiente accogliente"
+                  title="Il nostro locale - Un'atmosfera che ti fa sentire a casa"
+                  loading="lazy"
+                  width={800}
+                  height={1000}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -245,7 +249,11 @@ export default function About() {
             <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '3/4' }}>
               <img
                 src={chefImage}
-                alt="Preparazione del caffè"
+                alt="Preparazione del caffè al Caffè del Corso"
+                title="L'arte del caffè - Qualità e passione dal 1985"
+                loading="lazy"
+                width={600}
+                height={800}
                 className="w-full h-full object-cover"
               />
             </div>
