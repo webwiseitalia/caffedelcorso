@@ -1,25 +1,49 @@
 /**
- * HERO - Chaotic Cinematic Layout
- * Tipografia massiva con elementi sovrapposti e posizionamento irregolare
+ * HERO - Full Screen Background Image
+ * Immagine a tutto schermo con tipografia massiva sopra
  */
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import heroImage from '../assets/foto/foto-27.webp'
-import heroImage2 from '../assets/foto/foto-17.webp'
+import heroImage from '../assets/579725215_18288934612275784_4089771566350949442_n..webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero({ lenis }) {
   const sectionRef = useRef(null)
   const titleRef = useRef(null)
-  const image1Ref = useRef(null)
-  const image2Ref = useRef(null)
+  const imageRef = useRef(null)
+  const overlayRef = useRef(null)
   const scrollTextRef = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Immagine - reveal con zoom
+      gsap.fromTo(
+        imageRef.current,
+        { scale: 1.3, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 2,
+          delay: 2,
+          ease: 'power3.out',
+        }
+      )
+
+      // Overlay fade in
+      gsap.fromTo(
+        overlayRef.current,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1.5,
+          delay: 2.2,
+          ease: 'power2.out',
+        }
+      )
+
       // Titolo - caratteri che entrano in sequenza caotica
       const chars = titleRef.current?.querySelectorAll('.char') || []
       gsap.fromTo(
@@ -38,60 +62,20 @@ export default function Hero({ lenis }) {
             from: 'random'
           },
           duration: 1.2,
-          delay: 2.2,
+          delay: 2.4,
           ease: 'power4.out',
         }
       )
 
-      // Prima immagine - reveal diagonale
-      gsap.fromTo(
-        image1Ref.current,
-        { clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)' },
-        {
-          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-          duration: 1.8,
-          delay: 2.5,
-          ease: 'power4.inOut',
-        }
-      )
-
-      // Seconda immagine - reveal da destra con rotazione
-      gsap.fromTo(
-        image2Ref.current,
-        {
-          clipPath: 'inset(0 100% 0 0)',
-          rotate: 8
-        },
-        {
-          clipPath: 'inset(0 0% 0 0)',
-          rotate: -3,
-          duration: 1.5,
-          delay: 3,
-          ease: 'power4.inOut',
-        }
-      )
-
-      // Parallax sullo scroll
-      gsap.to(image1Ref.current, {
-        yPercent: 30,
+      // Parallax immagine sullo scroll - solo movimento verticale, niente zoom
+      gsap.to(imageRef.current, {
+        yPercent: 15,
         ease: 'none',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
           end: 'bottom top',
-          scrub: 1.5,
-        },
-      })
-
-      gsap.to(image2Ref.current, {
-        yPercent: -20,
-        rotate: -8,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
+          scrub: true,
         },
       })
 
@@ -122,8 +106,27 @@ export default function Hero({ lenis }) {
       ref={sectionRef}
       id="hero"
       className="relative min-h-screen overflow-hidden"
-      style={{ background: 'var(--color-bg)' }}
     >
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          ref={imageRef}
+          src={heroImage}
+          alt="Caffè del Corso"
+          className="w-full h-full object-cover"
+          style={{ opacity: 0 }}
+        />
+        {/* Overlay scuro per leggibilità */}
+        <div
+          ref={overlayRef}
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to top, rgba(28, 25, 23, 0.9) 0%, rgba(28, 25, 23, 0.4) 50%, rgba(28, 25, 23, 0.6) 100%)',
+            opacity: 0,
+          }}
+        />
+      </div>
+
       {/* Background - Grande numero decorativo */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-massive text-outline pointer-events-none select-none opacity-[0.03]"
@@ -132,52 +135,8 @@ export default function Hero({ lenis }) {
         1985
       </div>
 
-      {/* Immagine 1 - Posizionata in modo caotico a sinistra */}
-      <div
-        ref={image1Ref}
-        className="absolute top-[15%] left-[5%] w-[35vw] md:w-[28vw] z-base"
-        style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)' }}
-      >
-        <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-          <img
-            src={heroImage}
-            alt="Atmosfera al Caffè del Corso"
-            className="w-full h-full object-cover"
-          />
-          <div
-            className="absolute inset-0"
-            style={{ background: 'linear-gradient(to top, var(--color-bg) 0%, transparent 40%)' }}
-          />
-        </div>
-        {/* Label sotto l'immagine */}
-        <div className="mt-4 flex items-center gap-3">
-          <span className="dot" />
-          <span className="text-small" style={{ color: 'var(--color-text-muted)' }}>
-            Dal 1985
-          </span>
-        </div>
-      </div>
-
-      {/* Immagine 2 - Sovrapposta a destra, ruotata */}
-      <div
-        ref={image2Ref}
-        className="absolute top-[35%] right-[8%] w-[30vw] md:w-[22vw] z-content"
-        style={{
-          clipPath: 'inset(0 100% 0 0)',
-          transform: 'rotate(8deg)'
-        }}
-      >
-        <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '4/5' }}>
-          <img
-            src={heroImage2}
-            alt="Momenti conviviali"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
       {/* Titolo principale - Posizionato al centro-basso */}
-      <div className="absolute bottom-[8%] left-0 right-0 container-wide z-content">
+      <div className="absolute bottom-[12%] left-0 right-0 container-wide z-content">
         <div ref={titleRef}>
           <h1 className="text-giant" style={{ color: 'var(--color-text)' }}>
             {titleText.split('').map((char, i) => (
@@ -235,7 +194,7 @@ export default function Hero({ lenis }) {
 
       {/* Coordinate - Angolo in basso a sinistra */}
       <div
-        className="absolute bottom-8 left-8 hidden md:flex items-center gap-4 text-mono"
+        className="absolute bottom-8 left-8 hidden md:flex items-center gap-4 text-mono z-content"
         style={{ color: 'var(--color-text-muted)' }}
       >
         <span>45.883°N</span>
@@ -246,7 +205,7 @@ export default function Hero({ lenis }) {
       {/* Scroll indicator */}
       <div
         ref={scrollTextRef}
-        className="absolute bottom-8 right-8 flex items-center gap-4"
+        className="absolute bottom-8 right-8 flex items-center gap-4 z-content"
         style={{ color: 'var(--color-text-muted)' }}
       >
         <span className="text-small">Scroll</span>
@@ -263,7 +222,7 @@ export default function Hero({ lenis }) {
 
       {/* Linea decorativa diagonale */}
       <div
-        className="absolute top-0 right-[20%] w-px h-[60vh] origin-top hidden lg:block"
+        className="absolute top-0 right-[20%] w-px h-[60vh] origin-top hidden lg:block z-base"
         style={{
           background: 'var(--color-rust)',
           opacity: 0.3,
