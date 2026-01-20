@@ -31,20 +31,27 @@ export default function Gallery() {
   const gridRef = useRef(null)
   const bigTextRef = useRef(null)
 
+  // Galleria ridotta a 6 foto
   const galleryItems = [
-    { id: 1, image: foto17, title: 'Atmosfera Conviviale', rotate: -3, scale: 1.1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
-    { id: 2, image: foto2, title: 'Pizza Condivisa', rotate: 2, scale: 1, col: 'col-span-6 md:col-span-3', aspect: '3/4' },
-    { id: 3, image: foto8, title: 'Yogurt e Granola', rotate: -1, scale: 1, col: 'col-span-6 md:col-span-5', aspect: '5/4' },
-    { id: 4, image: foto15, title: 'Aperitivo Time', rotate: 4, scale: 1.05, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
-    { id: 5, image: foto18, title: 'Poke Bowl', rotate: -2, scale: 1, col: 'col-span-6 md:col-span-3', aspect: '1/1' },
-    { id: 6, image: foto1, title: 'Zabaione Artigianale', rotate: 3, scale: 1, col: 'col-span-6 md:col-span-5', aspect: '5/6' },
-    { id: 7, image: foto10, title: 'Pancake Gourmet', rotate: -4, scale: 1.1, col: 'col-span-6 md:col-span-4', aspect: '4/3' },
-    { id: 8, image: foto7, title: 'Insalata Fresca', rotate: 1, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '3/4' },
-    { id: 9, image: foto5, title: "Colazione all'Aperto", rotate: -3, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
-    { id: 10, image: foto4, title: 'Tagliere Aperitivo', rotate: 2, scale: 1.05, col: 'col-span-6 md:col-span-4', aspect: '5/4' },
-    { id: 11, image: foto6, title: 'Dolce Momento', rotate: -1, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '1/1' },
-    { id: 12, image: foto14, title: 'Dettagli di Stile', rotate: 3, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
+    { id: 1, image: foto17, title: 'Atmosfera Conviviale', rotate: -2, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
+    { id: 2, image: foto2, title: 'Pizza Condivisa', rotate: 2, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
+    { id: 3, image: foto8, title: 'Yogurt e Granola', rotate: -1, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
+    { id: 4, image: foto15, title: 'Aperitivo Time', rotate: 3, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
+    { id: 5, image: foto18, title: 'Poke Bowl', rotate: -2, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
+    { id: 6, image: foto1, title: 'Zabaione Artigianale', rotate: 2, scale: 1, col: 'col-span-6 md:col-span-4', aspect: '4/5' },
   ]
+
+  // Post Instagram - collegati al profilo
+  const instagramPosts = [
+    { id: 1, image: foto10, alt: 'Post Instagram 1' },
+    { id: 2, image: foto7, alt: 'Post Instagram 2' },
+    { id: 3, image: foto5, alt: 'Post Instagram 3' },
+    { id: 4, image: foto4, alt: 'Post Instagram 4' },
+    { id: 5, image: foto6, alt: 'Post Instagram 5' },
+    { id: 6, image: foto14, alt: 'Post Instagram 6' },
+  ]
+
+  const instagramUrl = 'https://www.instagram.com/caffedelcorsoboario/'
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -240,55 +247,90 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Instagram CTA - Posizionato in modo asimmetrico */}
-        <div className="mt-24 md:mt-32 grid grid-cols-12">
-          <div
-            className="col-span-12 md:col-span-8 md:col-start-3 p-8 md:p-12"
-            style={{
-              background: 'var(--color-bg-cream)',
-              transform: 'rotate(-1deg)',
-            }}
-          >
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8" style={{ transform: 'rotate(1deg)' }}>
-              <div>
-                <p
-                  className="text-small mb-2"
-                  style={{ color: 'var(--color-rust)' }}
-                >
-                  Seguici su Instagram
-                </p>
-                <p className="text-headline" style={{ color: 'var(--color-text-dark)' }}>
-                  @caffedelcorsoboario
-                </p>
-              </div>
-
+        {/* Instagram Feed Section */}
+        <div className="mt-24 md:mt-32">
+          {/* Header Instagram */}
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-10 px-6 lg:px-0">
+            <div>
+              <p
+                className="text-small mb-2"
+                style={{ color: 'var(--color-rust)' }}
+              >
+                Seguici su Instagram
+              </p>
               <a
-                href="https://instagram.com/caffedelcorsoboario"
+                href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-4"
+                className="text-headline hover:text-[var(--color-rust)] transition-colors duration-300 inline-flex items-center gap-3"
+                style={{ color: 'var(--color-text)' }}
               >
-                <span
-                  className="text-body"
-                  style={{ color: 'var(--color-text-muted)' }}
+                <svg
+                  className="w-7 h-7"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  style={{ color: 'var(--color-rust)' }}
                 >
-                  Scopri di più
-                </span>
-                <span
-                  className="w-14 h-14 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
-                  style={{ background: 'var(--color-rust)' }}
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                @caffedelcorsoboario
+              </a>
+            </div>
+
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              <span>Vai al profilo</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          {/* Instagram Posts Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-3">
+            {instagramPosts.map((post) => (
+              <a
+                key={post.id}
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-square overflow-hidden"
+              >
+                <img
+                  src={post.image}
+                  alt={post.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Overlay con icona Instagram */}
+                <div
+                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ background: 'rgba(180, 83, 9, 0.8)' }}
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-10 h-10"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     style={{ color: 'var(--color-text)' }}
                   >
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
-                </span>
+                </div>
               </a>
-            </div>
+            ))}
           </div>
         </div>
       </div>

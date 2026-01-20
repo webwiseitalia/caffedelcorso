@@ -229,7 +229,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Services Grid - Layout caotico */}
+        {/* Services Grid - Layout caotico solo su desktop */}
         <div
           ref={cardsRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
@@ -239,7 +239,9 @@ export default function Services() {
               key={index}
               className="service-card group relative"
               style={{
-                transform: `translateX(${service.offset.x}px) translateY(${service.offset.y}px) rotate(${service.offset.rotate}deg)`,
+                '--offset-x': `${service.offset.x}px`,
+                '--offset-y': `${service.offset.y}px`,
+                '--offset-rotate': `${service.offset.rotate}deg`,
               }}
             >
               <div

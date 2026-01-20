@@ -163,11 +163,11 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-12 gap-8 md:gap-12">
-          {/* Contact Info - sinistra con offset */}
-          <div ref={infoRef} className="col-span-12 lg:col-span-5 lg:col-start-1">
-            <div className="space-y-10">
+          {/* Contact Info - sinistra con offset solo su desktop */}
+          <div ref={infoRef} className="col-span-12 lg:col-span-5 lg:col-start-1 px-6 lg:px-0">
+            <div className="space-y-10 text-center lg:text-left">
               {/* Address */}
-              <div className="info-item group" style={{ marginLeft: '1rem' }}>
+              <div className="info-item group contact-offset-1">
                 <p
                   className="text-small mb-3"
                   style={{ color: 'var(--color-rust)' }}
@@ -196,7 +196,7 @@ export default function Contact() {
               </div>
 
               {/* Phone */}
-              <div className="info-item group" style={{ marginLeft: '-0.5rem' }}>
+              <div className="info-item group contact-offset-2">
                 <p
                   className="text-small mb-3"
                   style={{ color: 'var(--color-rust)' }}
@@ -213,7 +213,7 @@ export default function Contact() {
               </div>
 
               {/* Email */}
-              <div className="info-item group" style={{ marginLeft: '2rem' }}>
+              <div className="info-item group contact-offset-3">
                 <p
                   className="text-small mb-3"
                   style={{ color: 'var(--color-rust)' }}
@@ -230,14 +230,14 @@ export default function Contact() {
               </div>
 
               {/* Social */}
-              <div className="info-item" style={{ marginLeft: '0.5rem' }}>
+              <div className="info-item contact-offset-4">
                 <p
                   className="text-small mb-4"
                   style={{ color: 'var(--color-rust)' }}
                 >
                   Social
                 </p>
-                <div className="flex gap-3">
+                <div className="flex gap-3 justify-center lg:justify-start">
                   <a
                     href="https://instagram.com/caffedelcorsoboario"
                     target="_blank"
@@ -285,11 +285,10 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Form - destra con rotazione */}
+          {/* Form - destra con rotazione solo su desktop */}
           <div
             ref={formRef}
-            className="col-span-12 lg:col-span-6 lg:col-start-7"
-            style={{ transform: 'rotate(-1deg)' }}
+            className="col-span-12 lg:col-span-6 lg:col-start-7 px-6 lg:px-0 form-container"
           >
             <div
               className="p-8 md:p-10"
@@ -426,19 +425,18 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Map Section - con rotazione */}
+        {/* Map Section - con rotazione e hover colorato */}
         <div className="mt-24 md:mt-32 relative">
           <div
-            className="aspect-[21/9] w-full overflow-hidden"
+            className="map-container aspect-[21/9] w-full overflow-hidden"
             style={{ transform: 'rotate(1deg)' }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.5891234567!2d10.183!3d45.883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDUyJzU4LjgiTiAxMMKwMTAnNTkuOCJF!5e0!3m2!1sit!2sit!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1390.4!2d10.1847!3d45.8838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47817e3c8b8b8b8b%3A0x1234567890abcdef!2sVia%20Vittorio%20Montiglio%2C%201%2C%2025047%20Darfo%20Boario%20Terme%20BS!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
               width="100%"
               height="100%"
               style={{
                 border: 0,
-                filter: 'grayscale(100%) contrast(1.1) sepia(20%)',
                 transform: 'rotate(-1deg) scale(1.05)',
               }}
               allowFullScreen=""
@@ -447,9 +445,9 @@ export default function Contact() {
             />
           </div>
 
-          {/* Map overlay */}
+          {/* Map overlay - nascosto su mobile per permettere interazione con la mappa */}
           <div
-            className="absolute bottom-6 left-6 p-6"
+            className="hidden lg:block absolute bottom-6 left-6 p-6"
             style={{
               background: 'var(--color-rust)',
               transform: 'rotate(-3deg)',

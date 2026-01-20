@@ -39,10 +39,10 @@ export default function Footer({ lenis }) {
       />
 
       <div className="container-wide">
-        {/* Main Footer Grid - Layout caotico */}
-        <div className="grid grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20">
-          {/* Brand Column - spostato */}
-          <div className="col-span-12 lg:col-span-4" style={{ marginTop: '-1rem' }}>
+        {/* Main Footer Grid - Layout caotico solo su desktop */}
+        <div className="grid grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20 px-6 lg:px-0">
+          {/* Brand Column - spostato solo su desktop */}
+          <div className="col-span-12 lg:col-span-4 text-center lg:text-left footer-offset-brand">
             <div className="mb-6">
               <h3
                 className="text-display leading-none mb-2"
@@ -59,7 +59,7 @@ export default function Footer({ lenis }) {
             </div>
 
             <p
-              className="text-body max-w-xs"
+              className="text-body max-w-xs mx-auto lg:mx-0"
               style={{ color: 'var(--color-text-muted)' }}
             >
               Il tuo bar di fiducia nel cuore di Boario Terme. Caffè di qualità
@@ -67,8 +67,8 @@ export default function Footer({ lenis }) {
             </p>
           </div>
 
-          {/* Navigation - offset */}
-          <div className="col-span-6 lg:col-span-2 lg:col-start-6" style={{ marginTop: '2rem' }}>
+          {/* Navigation - offset solo su desktop */}
+          <div className="col-span-6 lg:col-span-2 lg:col-start-6 footer-offset-nav">
             <p
               className="text-small mb-6"
               style={{ color: 'var(--color-rust)' }}
@@ -79,7 +79,8 @@ export default function Footer({ lenis }) {
               {navLinks.map((link, i) => (
                 <li
                   key={link.name}
-                  style={{ marginLeft: `${(i % 3) * 0.5}rem` }}
+                  className="footer-nav-item"
+                  style={{ '--nav-offset': `${(i % 3) * 0.5}rem` }}
                 >
                   <a
                     href={link.href}
@@ -94,8 +95,8 @@ export default function Footer({ lenis }) {
             </ul>
           </div>
 
-          {/* Contact Info - offset opposto */}
-          <div className="col-span-6 lg:col-span-3" style={{ marginTop: '-0.5rem' }}>
+          {/* Contact Info - offset solo su desktop */}
+          <div className="col-span-6 lg:col-span-3 footer-offset-contact">
             <p
               className="text-small mb-6"
               style={{ color: 'var(--color-rust)' }}
@@ -135,10 +136,10 @@ export default function Footer({ lenis }) {
           </div>
 
           {/* Social + Back to Top */}
-          <div className="col-span-12 lg:col-span-2 flex flex-col items-start lg:items-end justify-between" style={{ marginTop: '1.5rem' }}>
-            <div className="mb-6 lg:mb-0">
+          <div className="col-span-12 lg:col-span-2 flex flex-col items-center lg:items-end justify-between footer-offset-social">
+            <div className="mb-6 lg:mb-0 text-center lg:text-right">
               <p
-                className="text-small mb-4 lg:text-right"
+                className="text-small mb-4"
                 style={{ color: 'var(--color-rust)' }}
               >
                 Social

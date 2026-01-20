@@ -208,7 +208,7 @@ export default function Menu() {
         </div>
       </div>
 
-      <div className="container-wide relative">
+      <div className="container-wide relative px-6 md:px-4">
         {/* Header con layout asimmetrico */}
         <div className="grid grid-cols-12 gap-4 mb-16 md:mb-24">
           {/* Titolo - spostato */}
@@ -286,10 +286,9 @@ export default function Menu() {
             {menuItems[activeCategory].map((item, index) => (
               <div
                 key={index}
-                className="menu-item group relative py-6"
-                style={{
-                  marginLeft: index % 3 === 0 ? '0' : index % 3 === 1 ? '2rem' : '-1rem',
-                }}
+                className={`menu-item group relative py-6 md:ml-0 ${
+                  index % 3 === 1 ? 'md:ml-8' : index % 3 === 2 ? 'md:-ml-4' : ''
+                }`}
               >
                 {/* Linea sottostante */}
                 <div
