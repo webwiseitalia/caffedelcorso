@@ -231,6 +231,18 @@ export default function Footer({ lenis }) {
             >
               Cookie Policy
             </Link>
+            <span className="text-mono" style={{ color: 'var(--color-text-muted)', opacity: 0.6 }}>
+              Powered By{' '}
+              <a
+                href="https://webwiseitalia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline transition-colors hover:opacity-80"
+                style={{ color: 'var(--color-rust)' }}
+              >
+                Webwise
+              </a>
+            </span>
           </div>
         </div>
       </div>
