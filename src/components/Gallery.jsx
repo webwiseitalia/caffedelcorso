@@ -9,7 +9,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Import sfondi
-import sfondoGallery from '../assets/sfondi/sfondi-6.webp'
+import sfondo1 from '../assets/sfondi/sfondi-1.webp'
+import sfondo6 from '../assets/sfondi/sfondi-6.webp'
 
 // Import photos
 import foto1 from '../assets/foto/foto-1.webp'
@@ -142,14 +143,25 @@ export default function Gallery() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg)' }}
     >
-      {/* Sfondo decorativo grande */}
+      {/* Sfondo FULL PAGE */}
       <div
-        className="absolute -bottom-20 -right-20 w-[50%] h-[60%] pointer-events-none hidden md:block"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${sfondoGallery})`,
+          backgroundImage: `url(${sfondo6})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center left',
-          opacity: 0.25,
+          backgroundPosition: 'center',
+          opacity: 0.1,
+        }}
+      />
+
+      {/* Secondo sfondo angolo */}
+      <div
+        className="absolute top-0 left-0 w-[40%] h-[45%] pointer-events-none"
+        style={{
+          backgroundImage: `url(${sfondo1})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom right',
+          opacity: 0.2,
         }}
       />
 

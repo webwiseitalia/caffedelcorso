@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import serviceImage from '../assets/foto/foto-21.webp'
-import sfondoServizi from '../assets/sfondi/sfondi-1.webp'
+import sfondo1 from '../assets/sfondi/sfondi-1.webp'
+import sfondo4 from '../assets/sfondi/sfondi-4.webp'
+import sfondo6 from '../assets/sfondi/sfondi-6.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -27,6 +29,7 @@ export default function Services() {
         'Inizia la giornata con energia: caffè espresso, cappuccini cremosi, cornetti fragranti.',
       features: ['Caffè 100% Arabica', 'Cornetti artigianali', 'Brunch weekend'],
       offset: { x: 0, y: 0, rotate: -2 },
+      bgImage: sfondo1,
     },
     {
       number: '02',
@@ -35,6 +38,7 @@ export default function Services() {
         'Pranzo veloce ma gustoso: pinse, panini gourmet, insalate fresche e piatti caldi.',
       features: ['Piatti del giorno', 'Pinse artigianali', 'Insalate fresche'],
       offset: { x: 20, y: -30, rotate: 1 },
+      bgImage: sfondo6,
     },
     {
       number: '03',
@@ -43,6 +47,7 @@ export default function Services() {
         'Rilassati con un aperitivo in compagnia. Spritz, cocktail classici e vini locali.',
       features: ['Cocktail bar', 'Vini locali', 'Taglieri stuzzichini'],
       offset: { x: -15, y: 20, rotate: -1 },
+      bgImage: sfondo4,
     },
     {
       number: '04',
@@ -52,6 +57,7 @@ export default function Services() {
       features: ['Feste private', 'Eventi aziendali', 'Menu personalizzati'],
       offset: { x: 30, y: -10, rotate: 2 },
       link: '/eventi-privati',
+      bgImage: sfondo1,
     },
   ]
 
@@ -160,14 +166,14 @@ export default function Services() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
-      {/* Sfondo decorativo grande */}
+      {/* Sfondo FULL PAGE */}
       <div
-        className="absolute -bottom-20 -left-20 w-[60%] h-[70%] pointer-events-none hidden md:block"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${sfondoServizi})`,
+          backgroundImage: `url(${sfondo1})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.35,
+          opacity: 0.15,
         }}
       />
 
@@ -268,11 +274,24 @@ export default function Services() {
                 }}
               >
                 <div
-                  className="relative p-8 md:p-10 transition-all duration-500 group-hover:translate-y-[-5px]"
+                  className="relative p-8 md:p-10 transition-all duration-500 group-hover:translate-y-[-5px] overflow-hidden"
                   style={{
                     background: index % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-warm)',
                   }}
                 >
+                  {/* Sfondo decorativo card */}
+                  {service.bgImage && (
+                    <div
+                      className="absolute -bottom-4 -right-4 w-[60%] h-[70%] pointer-events-none transition-transform duration-500 group-hover:scale-110"
+                      style={{
+                        backgroundImage: `url(${service.bgImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        opacity: 0.25,
+                      }}
+                    />
+                  )}
+
                   {/* Number grande */}
                   <span
                     className="absolute -top-6 -right-2 opacity-20"

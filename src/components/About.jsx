@@ -138,14 +138,14 @@ export default function About() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
-      {/* Sfondo decorativo grande */}
+      {/* Sfondo FULL PAGE */}
       <div
-        className="absolute -top-20 -right-20 w-[70%] h-[80%] pointer-events-none hidden md:block"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `url(${sfondoAbout})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.35,
+          backgroundPosition: 'center right',
+          opacity: 0.2,
         }}
       />
 

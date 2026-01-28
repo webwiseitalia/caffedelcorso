@@ -7,7 +7,9 @@ import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import menuImage from '../assets/foto/foto-7.webp'
-import sfondoMenu from '../assets/sfondi/sfondi-4.webp'
+import sfondo3 from '../assets/sfondi/sfondi-3.webp'
+import sfondo4 from '../assets/sfondi/sfondi-4.webp'
+import sfondo5 from '../assets/sfondi/sfondi-5.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -163,14 +165,25 @@ export default function Menu() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg)' }}
     >
-      {/* Sfondo decorativo grande */}
+      {/* Sfondo FULL PAGE */}
       <div
-        className="absolute -top-10 -left-10 w-[55%] h-[65%] pointer-events-none hidden md:block"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${sfondoMenu})`,
+          backgroundImage: `url(${sfondo4})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center right',
-          opacity: 0.3,
+          backgroundPosition: 'center left',
+          opacity: 0.12,
+        }}
+      />
+
+      {/* Secondo sfondo decorativo angolo */}
+      <div
+        className="absolute bottom-0 right-0 w-[50%] h-[40%] pointer-events-none"
+        style={{
+          backgroundImage: `url(${sfondo3})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'top left',
+          opacity: 0.2,
         }}
       />
 
@@ -372,6 +385,16 @@ export default function Menu() {
                 transform: 'rotate(-1deg)',
               }}
             >
+              {/* Sfondo decorativo card */}
+              <div
+                className="absolute -top-10 -right-10 w-[50%] h-[120%] pointer-events-none"
+                style={{
+                  backgroundImage: `url(${sfondo5})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: 0.3,
+                }}
+              />
               <div
                 className="absolute inset-0"
                 style={{

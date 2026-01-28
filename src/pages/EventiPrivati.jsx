@@ -153,7 +153,7 @@ export default function EventiPrivati() {
       >
         {/* Sfondo decorativo cocktail grande */}
         <div
-          className="absolute -bottom-10 -left-10 w-[60%] h-[120%] pointer-events-none hidden md:block"
+          className="absolute -bottom-5 -left-5 md:-bottom-10 md:-left-10 w-[70%] md:w-[60%] h-[80%] md:h-[120%] pointer-events-none"
           style={{
             backgroundImage: `url(${sfondoCocktail})`,
             backgroundSize: 'cover',

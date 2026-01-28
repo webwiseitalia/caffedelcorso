@@ -6,7 +6,8 @@
 import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import sfondoContatti from '../assets/sfondi/sfondi-5.webp'
+import sfondo2 from '../assets/sfondi/sfondi-2.webp'
+import sfondo5 from '../assets/sfondi/sfondi-5.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -114,14 +115,25 @@ export default function Contact() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
-      {/* Sfondo decorativo foglie grande */}
+      {/* Sfondo FULL PAGE */}
       <div
-        className="absolute -top-20 -left-20 w-[65%] h-[70%] pointer-events-none hidden md:block"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${sfondoContatti})`,
+          backgroundImage: `url(${sfondo5})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.35,
+          opacity: 0.18,
+        }}
+      />
+
+      {/* Secondo sfondo angolo destro */}
+      <div
+        className="absolute top-0 right-0 w-[45%] h-[50%] pointer-events-none"
+        style={{
+          backgroundImage: `url(${sfondo2})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom left',
+          opacity: 0.25,
         }}
       />
 
