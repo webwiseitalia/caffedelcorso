@@ -4,6 +4,7 @@
  */
 
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import serviceImage from '../assets/foto/foto-21.webp'
@@ -49,6 +50,7 @@ export default function Services() {
         'Organizziamo eventi privati e feste. Contattaci per creare il tuo evento su misura.',
       features: ['Feste private', 'Eventi aziendali', 'Menu personalizzati'],
       offset: { x: 30, y: -10, rotate: 2 },
+      link: '/eventi-privati',
     },
   ]
 
@@ -238,83 +240,112 @@ export default function Services() {
           ref={cardsRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
         >
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="service-card group relative"
-              style={{
-                '--offset-x': `${service.offset.x}px`,
-                '--offset-y': `${service.offset.y}px`,
-                '--offset-rotate': `${service.offset.rotate}deg`,
-              }}
-            >
-              <div
-                className="relative p-8 md:p-10 transition-all duration-500 group-hover:translate-y-[-5px]"
+          {services.map((service, index) => {
+            const CardWrapper = service.link ? Link : 'div'
+            const cardProps = service.link ? { to: service.link } : {}
+
+            return (
+              <CardWrapper
+                key={index}
+                {...cardProps}
+                className={`service-card group relative block ${service.link ? 'cursor-pointer' : ''}`}
                 style={{
-                  background: index % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-warm)',
+                  '--offset-x': `${service.offset.x}px`,
+                  '--offset-y': `${service.offset.y}px`,
+                  '--offset-rotate': `${service.offset.rotate}deg`,
                 }}
               >
-                {/* Number grande */}
-                <span
-                  className="absolute -top-6 -right-2 opacity-20"
+                <div
+                  className="relative p-8 md:p-10 transition-all duration-500 group-hover:translate-y-[-5px]"
                   style={{
-                    fontSize: 'clamp(4rem, 8vw, 8rem)',
-                    fontFamily: 'var(--font-display)',
-                    color: 'var(--color-rust)',
-                    lineHeight: 1,
+                    background: index % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-warm)',
                   }}
                 >
-                  {service.number}
-                </span>
+                  {/* Number grande */}
+                  <span
+                    className="absolute -top-6 -right-2 opacity-20"
+                    style={{
+                      fontSize: 'clamp(4rem, 8vw, 8rem)',
+                      fontFamily: 'var(--font-display)',
+                      color: 'var(--color-rust)',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {service.number}
+                  </span>
 
-                {/* Content */}
-                <span
-                  className="text-small mb-6 block"
-                  style={{ color: 'var(--color-rust)' }}
-                >
-                  {service.number}
-                </span>
+                  {/* Content */}
+                  <span
+                    className="text-small mb-6 block"
+                    style={{ color: 'var(--color-rust)' }}
+                  >
+                    {service.number}
+                  </span>
 
-                <h3
-                  className="text-headline mb-4"
-                  style={{ color: 'var(--color-text)' }}
-                >
-                  {service.title}
-                </h3>
+                  <h3
+                    className="text-headline mb-4"
+                    style={{ color: 'var(--color-text)' }}
+                  >
+                    {service.title}
+                  </h3>
 
-                <p
-                  className="text-body mb-8"
-                  style={{ color: 'var(--color-text-muted)' }}
-                >
-                  {service.description}
-                </p>
+                  <p
+                    className="text-body mb-8"
+                    style={{ color: 'var(--color-text-muted)' }}
+                  >
+                    {service.description}
+                  </p>
 
-                {/* Features */}
-                <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, i) => (
-                    <span
-                      key={i}
-                      className="text-mono px-3 py-2"
-                      style={{
-                        background: 'var(--color-rust)',
-                        color: 'var(--color-text)',
-                        fontSize: '0.65rem',
-                        transform: `rotate(${i % 2 === 0 ? -1 : 1}deg)`,
-                      }}
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, i) => (
+                      <span
+                        key={i}
+                        className="text-mono px-3 py-2"
+                        style={{
+                          background: 'var(--color-rust)',
+                          color: 'var(--color-text)',
+                          fontSize: '0.65rem',
+                          transform: `rotate(${i % 2 === 0 ? -1 : 1}deg)`,
+                        }}
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Link indicator for clickable cards */}
+                  {service.link && (
+                    <div
+                      className="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ background: 'var(--color-rust)' }}
                     >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        style={{ color: 'var(--color-text)' }}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </div>
+                  )}
 
-                {/* Linea hover */}
-                <div
-                  className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-700"
-                  style={{ background: 'var(--color-rust)' }}
-                />
-              </div>
-            </div>
-          ))}
+                  {/* Linea hover */}
+                  <div
+                    className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-700"
+                    style={{ background: 'var(--color-rust)' }}
+                  />
+                </div>
+              </CardWrapper>
+            )
+          })}
         </div>
 
         {/* Hours Section - Posizionata asimmetricamente */}
