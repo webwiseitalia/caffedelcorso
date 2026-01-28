@@ -6,6 +6,7 @@
 import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import sfondoContatti from '../assets/sfondi/sfondi-5.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -113,6 +114,17 @@ export default function Contact() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
+      {/* Sfondo decorativo foglie grande */}
+      <div
+        className="absolute -top-20 -left-20 w-[65%] h-[70%] pointer-events-none hidden md:block"
+        style={{
+          backgroundImage: `url(${sfondoContatti})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.35,
+        }}
+      />
+
       {/* Grande testo decorativo */}
       <div
         className="absolute bottom-20 right-0 whitespace-nowrap pointer-events-none select-none"

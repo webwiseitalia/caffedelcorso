@@ -8,6 +8,9 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion, AnimatePresence } from 'framer-motion'
 
+// Import sfondi
+import sfondoGallery from '../assets/sfondi/sfondi-6.webp'
+
 // Import photos
 import foto1 from '../assets/foto/foto-1.webp'
 import foto2 from '../assets/foto/foto-2.webp'
@@ -139,6 +142,17 @@ export default function Gallery() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg)' }}
     >
+      {/* Sfondo decorativo grande */}
+      <div
+        className="absolute -bottom-20 -right-20 w-[50%] h-[60%] pointer-events-none hidden md:block"
+        style={{
+          backgroundImage: `url(${sfondoGallery})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center left',
+          opacity: 0.25,
+        }}
+      />
+
       {/* Grande testo di sfondo */}
       <div
         ref={bigTextRef}

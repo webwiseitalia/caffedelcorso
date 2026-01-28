@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import menuImage from '../assets/foto/foto-7.webp'
+import sfondoMenu from '../assets/sfondi/sfondi-4.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -162,6 +163,17 @@ export default function Menu() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg)' }}
     >
+      {/* Sfondo decorativo grande */}
+      <div
+        className="absolute -top-10 -left-10 w-[55%] h-[65%] pointer-events-none hidden md:block"
+        style={{
+          backgroundImage: `url(${sfondoMenu})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center right',
+          opacity: 0.3,
+        }}
+      />
+
       {/* Grande numero di sfondo */}
       <div
         ref={bigNumberRef}

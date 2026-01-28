@@ -8,6 +8,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import aboutImage from '../assets/foto/foto-11.webp'
 import chefImage from '../assets/foto/foto-13.webp'
+import sfondoAbout from '../assets/sfondi/sfondi-2.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -137,6 +138,17 @@ export default function About() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
+      {/* Sfondo decorativo grande */}
+      <div
+        className="absolute -top-20 -right-20 w-[70%] h-[80%] pointer-events-none hidden md:block"
+        style={{
+          backgroundImage: `url(${sfondoAbout})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.35,
+        }}
+      />
+
       {/* Grande testo di sfondo */}
       <div
         ref={bigTextRef}

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import serviceImage from '../assets/foto/foto-21.webp'
+import sfondoServizi from '../assets/sfondi/sfondi-1.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -159,6 +160,17 @@ export default function Services() {
       className="relative py-32 md:py-48 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
+      {/* Sfondo decorativo grande */}
+      <div
+        className="absolute -bottom-20 -left-20 w-[60%] h-[70%] pointer-events-none hidden md:block"
+        style={{
+          backgroundImage: `url(${sfondoServizi})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.35,
+        }}
+      />
+
       {/* Grande testo decorativo */}
       <div
         className="absolute top-20 left-0 whitespace-nowrap pointer-events-none select-none"

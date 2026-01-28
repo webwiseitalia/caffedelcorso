@@ -15,6 +15,7 @@ import foto8 from '../assets/foto/foto-8.webp'
 import foto10 from '../assets/foto/foto-10.webp'
 import foto14 from '../assets/foto/foto-14.webp'
 import foto18 from '../assets/foto/foto-18.webp'
+import sfondoCocktail from '../assets/sfondi/sfondi-3.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -150,6 +151,17 @@ export default function EventiPrivati() {
         className="relative py-20 md:py-32 overflow-hidden"
         style={{ background: 'var(--color-bg-warm)' }}
       >
+        {/* Sfondo decorativo cocktail grande */}
+        <div
+          className="absolute -bottom-10 -left-10 w-[60%] h-[120%] pointer-events-none hidden md:block"
+          style={{
+            backgroundImage: `url(${sfondoCocktail})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center right',
+            opacity: 0.4,
+          }}
+        />
+
         {/* Background decorative text */}
         <div
           className="absolute top-10 left-0 whitespace-nowrap pointer-events-none select-none opacity-10"
