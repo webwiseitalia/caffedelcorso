@@ -8,6 +8,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import aboutImage from '../assets/foto/foto-11.webp'
 import chefImage from '../assets/foto/foto-13.webp'
+import verandaImage from '../assets/foto/foto-17.webp'
+import internoImage from '../assets/foto/foto-15.webp'
 import sfondoAbout from '../assets/sfondi/sfondi-2.webp'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -234,15 +236,11 @@ export default function About() {
             className="col-span-12 md:col-span-5 md:col-start-7 row-start-3 md:row-start-2 mt-12 md:mt-32 space-y-6"
           >
             <p className="text-body-xl" style={{ color: 'var(--color-text-dark)' }}>
-              <strong>Caffè del Corso</strong> nasce dalla passione per il caffè
-              autentico e dalla voglia di creare un luogo dove il tempo sembra
-              fermarsi.
+              La nostra identità si basa sulla <strong style={{ color: 'var(--color-rust)' }}>ricerca</strong>: prodotti selezionati, scelte curate e una proposta che punta sulla qualità e sulla convivialità.
             </p>
 
             <p className="text-body" style={{ color: 'var(--color-text-muted)' }}>
-              Situati nel centro storico di Darfo Boario Terme, siamo diventati un
-              punto di ritrovo per chi cerca qualità e convivialità. Ogni giorno
-              selezioniamo le migliori miscele, prepariamo colazioni genuine.
+              Qui ogni pausa è un'esperienza semplice, ma mai banale.
             </p>
 
             <div className="flex items-center gap-4 pt-4">
@@ -292,6 +290,99 @@ export default function About() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Storytelling - Due blocchi */}
+        <div className="mt-32 md:mt-48 space-y-24 md:space-y-32">
+          {/* Blocco 1 - La Veranda */}
+          <div className="grid grid-cols-12 gap-6 md:gap-12 items-center">
+            <div className="col-span-12 md:col-span-6 order-2 md:order-1">
+              <div
+                className="overflow-hidden shadow-2xl"
+                style={{ aspectRatio: '4/3', transform: 'rotate(-2deg)' }}
+              >
+                <img
+                  src={verandaImage}
+                  alt="La veranda del Caffè del Corso"
+                  title="La nostra veranda - Uno spazio verde e accogliente"
+                  loading="lazy"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+            <div className="col-span-12 md:col-span-5 md:col-start-8 order-1 md:order-2">
+              <p
+                className="text-small mb-4"
+                style={{ color: 'var(--color-rust)' }}
+              >
+                La Veranda
+              </p>
+              <h3
+                className="text-headline mb-6"
+                style={{ color: 'var(--color-text-dark)' }}
+              >
+                Dove il tempo{' '}
+                <em style={{ color: 'var(--color-rust)' }}>rallenta</em>
+              </h3>
+              <p
+                className="text-body-xl mb-4"
+                style={{ color: 'var(--color-text-dark)' }}
+              >
+                In veranda il tempo sembra rallentare, lasciando spazio solo al piacere di stare insieme.
+              </p>
+              <p
+                className="text-body"
+                style={{ color: 'var(--color-text-muted)' }}
+              >
+                Uno spazio verde, accogliente. Aperta d'estate e intima d'inverno, è pensata per vivere momenti conviviali senza tempo.
+              </p>
+            </div>
+          </div>
+
+          {/* Blocco 2 - L'Interno */}
+          <div className="grid grid-cols-12 gap-6 md:gap-12 items-center">
+            <div className="col-span-12 md:col-span-5 md:col-start-2">
+              <p
+                className="text-small mb-4"
+                style={{ color: 'var(--color-rust)' }}
+              >
+                L'Interno
+              </p>
+              <h3
+                className="text-headline mb-6"
+                style={{ color: 'var(--color-text-dark)' }}
+              >
+                Un'esperienza{' '}
+                <em style={{ color: 'var(--color-rust)' }}>mai banale</em>
+              </h3>
+              <p
+                className="text-body-xl mb-4"
+                style={{ color: 'var(--color-text-dark)' }}
+              >
+                Prodotti selezionati, scelte curate e una proposta che punta sulla qualità.
+              </p>
+              <p
+                className="text-body"
+                style={{ color: 'var(--color-text-muted)' }}
+              >
+                Ogni dettaglio è pensato per offrirti un momento di piacere autentico. Dal caffè della mattina all'aperitivo serale, qui trovi sempre qualcosa di speciale.
+              </p>
+            </div>
+            <div className="col-span-12 md:col-span-6 md:col-start-7">
+              <div
+                className="overflow-hidden shadow-2xl"
+                style={{ aspectRatio: '4/3', transform: 'rotate(2deg)' }}
+              >
+                <img
+                  src={internoImage}
+                  alt="Interno del Caffè del Corso"
+                  title="Il nostro interno - Qualità e convivialità"
+                  loading="lazy"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
