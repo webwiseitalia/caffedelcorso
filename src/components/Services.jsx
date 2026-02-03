@@ -29,6 +29,7 @@ export default function Services() {
         'Inizia la giornata con energia: caffè espresso, cappuccini cremosi, cornetti fragranti.',
       features: ['Caffè 100% Arabica', 'Cornetti artigianali', 'Brunch weekend'],
       offset: { x: 0, y: 0, rotate: -2 },
+      link: '/colazioni-brunch',
       bgImage: sfondo1,
     },
     {
