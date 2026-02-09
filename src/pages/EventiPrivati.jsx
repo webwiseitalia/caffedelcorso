@@ -18,6 +18,7 @@ import foto18 from '../assets/foto/foto-18.webp'
 import eventoBirthday from '../assets/new/new-9.webp'
 import eventoLaurea from '../assets/new/new-6.webp'
 import eventoParty from '../assets/new/new-1.webp'
+import eventoAllestimento from '../assets/foto/foto-31.webp'
 import sfondoCocktail from '../assets/sfondi/sfondi-3.webp'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -95,7 +96,7 @@ export default function EventiPrivati() {
       ],
       price: '20€ a persona',
       note: 'Bevande escluse',
-      image: eventoParty,
+      image: eventoAllestimento,
     },
     {
       title: 'Apericena Gold',
@@ -128,6 +129,7 @@ export default function EventiPrivati() {
       note: 'Contattaci per un preventivo personalizzato',
       highlight: true,
       image: eventoLaurea,
+      rotateImage: 90,
     },
     {
       title: 'CorsoBrunch',
@@ -278,6 +280,7 @@ export default function EventiPrivati() {
                       src={formula.image}
                       alt={formula.title}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      style={formula.rotateImage ? { transform: `rotate(${formula.rotateImage}deg) scale(1.4)` } : {}}
                     />
                   </div>
                 </div>
