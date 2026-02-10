@@ -15,6 +15,7 @@ import foto8 from '../assets/foto/foto-8.webp'
 import foto10 from '../assets/foto/foto-10.webp'
 import foto14 from '../assets/foto/foto-14.webp'
 import foto18 from '../assets/foto/foto-18.webp'
+import pancakeFrutta from '../assets/new/new-11.webp'
 import eventoBirthday from '../assets/new/new-9.webp'
 import eventoLaurea from '../assets/new/new-6.webp'
 import eventoParty from '../assets/new/new-1.webp'
@@ -159,7 +160,7 @@ export default function EventiPrivati() {
       ],
       price: '15€ a persona',
       note: 'Minimo 5 persone',
-      image: foto14,
+      image: pancakeFrutta,
     },
   ]
 

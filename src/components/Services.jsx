@@ -34,15 +34,6 @@ export default function Services() {
     },
     {
       number: '02',
-      title: 'Tavola Calda',
-      description:
-        'Pranzo veloce ma gustoso: pinse, panini gourmet, insalate fresche e piatti caldi.',
-      features: ['Piatti del giorno', 'Pinse artigianali', 'Insalate fresche'],
-      offset: { x: 20, y: -30, rotate: 1 },
-      bgImage: sfondo6,
-    },
-    {
-      number: '03',
       title: 'Aperitivi & Drink',
       description:
         'Rilassati con un aperitivo in compagnia. Spritz, cocktail classici e vini locali.',
@@ -51,7 +42,7 @@ export default function Services() {
       bgImage: sfondo4,
     },
     {
-      number: '04',
+      number: '03',
       title: 'Eventi Privati',
       description:
         'Organizziamo eventi privati e feste. Contattaci per creare il tuo evento su misura.',
@@ -262,12 +253,14 @@ export default function Services() {
           {services.map((service, index) => {
             const CardWrapper = service.link ? Link : 'div'
             const cardProps = service.link ? { to: service.link } : {}
+            // Centra l'ultima card se è dispari (terza card)
+            const isLastAndOdd = index === services.length - 1 && services.length % 2 === 1
 
             return (
               <CardWrapper
                 key={index}
                 {...cardProps}
-                className={`service-card group relative block ${service.link ? 'cursor-pointer' : ''}`}
+                className={`service-card group relative block ${service.link ? 'cursor-pointer' : ''} ${isLastAndOdd ? 'md:col-span-2 md:max-w-[50%] md:mx-auto' : ''}`}
                 style={{
                   '--offset-x': `${service.offset.x}px`,
                   '--offset-y': `${service.offset.y}px`,

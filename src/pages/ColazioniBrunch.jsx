@@ -17,6 +17,7 @@ import colazioneDolce from '../assets/new/new-7.webp'
 import brunchBrindisi from '../assets/new/new-10.webp'
 import pancakeFrutta from '../assets/new/new-11.webp'
 import verandaRelax from '../assets/new/new-12.webp'
+import heroColazione from '../assets/foto/foto-10.webp'
 
 // Sfondo decorativo
 import sfondoBrunch from '../assets/sfondi/sfondi-4.webp'
@@ -251,8 +252,8 @@ export default function ColazioniBrunch() {
                 style={{ aspectRatio: '4/3', transform: 'rotate(2deg)' }}
               >
                 <img
-                  src={brunchBrindisi}
-                  alt="Brunch con amiche al Caffè del Corso"
+                  src={heroColazione}
+                  alt="Colazione al Caffè del Corso"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -261,25 +262,9 @@ export default function ColazioniBrunch() {
         </div>
       </header>
 
-      {/* Storytelling Section - La Filosofia */}
+      {/* Storytelling Section */}
       <section ref={storytellingRef} className="py-20 md:py-32" style={{ background: 'var(--color-bg-cream)' }}>
         <div className="container-wide px-6">
-          {/* Intro */}
-          <div className="story-block max-w-3xl mx-auto text-center mb-20 md:mb-32">
-            <p className="text-small mb-4" style={{ color: 'var(--color-rust)' }}>
-              La nostra filosofia
-            </p>
-            <h2 className="text-headline mb-6" style={{ color: 'var(--color-text-dark)' }}>
-              Ogni mattina merita{' '}
-              <em style={{ color: 'var(--color-rust)' }}>attenzione</em>
-            </h2>
-            <p className="text-body-xl" style={{ color: 'var(--color-text-muted)' }}>
-              Non crediamo nella colazione frettolosa. Crediamo nel piacere di sedersi,
-              assaporare un buon caffè, gustare un cornetto appena sfornato.
-              Crediamo che i momenti migliori nascano quando ci si prende il tempo giusto.
-            </p>
-          </div>
-
           {/* Blocco 1 - La Colazione Italiana */}
           <div className="story-block grid grid-cols-12 gap-6 md:gap-12 items-center mb-20 md:mb-32">
             <div className="col-span-12 md:col-span-6 order-2 md:order-1">
