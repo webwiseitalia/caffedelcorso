@@ -1,6 +1,6 @@
 /**
  * Eventi Privati Page
- * Pagina dedicata agli eventi personalizzati
+ * Pagina dedicata agli eventi personalizzati e formule
  */
 
 import { useEffect, useRef } from 'react'
@@ -10,11 +10,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 // Import images
 import foto1 from '../assets/foto/foto-1.webp'
+import foto33 from '../assets/foto/foto-33.webp'
 import foto5 from '../assets/foto/foto-5.webp'
 import foto8 from '../assets/foto/foto-8.webp'
 import foto10 from '../assets/foto/foto-10.webp'
 import foto14 from '../assets/foto/foto-14.webp'
-import foto18 from '../assets/foto/foto-18.webp'
+import foto32 from '../assets/foto/foto-32.webp'
 import pancakeFrutta from '../assets/new/new-11.webp'
 import eventoBirthday from '../assets/new/new-9.webp'
 import eventoLaurea from '../assets/new/new-6.webp'
@@ -83,7 +84,7 @@ export default function EventiPrivati() {
       ],
       price: '15€ a persona',
       note: '1 consumazione a scelta inclusa',
-      image: foto1,
+      image: foto33,
     },
     {
       title: 'Apericena Silver',
@@ -240,10 +241,10 @@ export default function EventiPrivati() {
             <div className="col-span-12 lg:col-span-5 animate-item">
               <div
                 className="relative overflow-hidden shadow-2xl"
-                style={{ aspectRatio: '4/3', transform: 'rotate(2deg)' }}
+                style={{ aspectRatio: '3/4', transform: 'rotate(2deg)' }}
               >
                 <img
-                  src={foto18}
+                  src={foto32}
                   alt="Eventi privati al Caffè del Corso"
                   className="w-full h-full object-cover"
                 />

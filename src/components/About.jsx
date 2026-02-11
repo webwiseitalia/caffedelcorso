@@ -307,6 +307,7 @@ export default function About() {
                   title="La nostra veranda - Uno spazio verde e accogliente"
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  style={{ objectPosition: 'center top' }}
                 />
               </div>
             </div>
