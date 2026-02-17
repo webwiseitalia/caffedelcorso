@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import aboutImage from '../assets/foto/foto-11.webp'
 import chefImage from '../assets/foto/foto-13.webp'
 import verandaImage from '../assets/foto/foto-20.webp'
-import internoImage from '../assets/foto/foto-15.webp'
+import internoImage from '../assets/new/new-13.webp'
 import sfondoAbout from '../assets/sfondi/sfondi-2.webp'
 
 gsap.registerPlugin(ScrollTrigger)

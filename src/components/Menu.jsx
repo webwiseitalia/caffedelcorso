@@ -30,6 +30,7 @@ export default function Menu() {
     { id: 'cocktail', name: 'Cocktail', number: '05' },
     { id: 'vini-birre', name: 'Vini & Birre', number: '06' },
     { id: 'te-tisane', name: 'Tè & Tisane', number: '07' },
+    { id: 'pasticceria', name: 'Pasticceria Fresca', number: '08' },
   ]
 
   const menuItems = {
@@ -50,7 +51,7 @@ export default function Menu() {
       { name: 'Avocado Toast Vegano', description: 'Pane integrale, avocado, pomodorini, humus di ceci', price: '7.00' },
       { name: 'Pancake pistacchio e lamponi', description: 'Soffici pancake con topping a scelta', price: '6.50' },
       { name: 'Porridge', description: "Fiocchi d'avena con frutta e topping", price: '6.00' },
-      { name: 'Yogurt frutti rossi e granola', description: 'Bianco, cioccolato o pistacchio', price: '6.50' },
+      { name: 'Yogurt frutti rossi e granola', description: 'Yogurt frozen con frutta fresca, topping e granola', price: '6.50' },
       { name: 'Uovo', description: 'Due uova sbattute con fette di pane tostato', price: '6.00' },
     ],
     pranzo: [
@@ -85,11 +86,11 @@ export default function Menu() {
     ],
     'vini-birre': [
       { name: 'Franciacorta', description: 'Bollicine', price: '6.00', tag: 'Bollicine' },
-      { name: 'Prosecco (Treviso)', description: 'Bollicine fresche', price: '4.00' },
+      { name: 'Prosecco (Treviso)', description: 'Bollicine', price: '4.00' },
       { name: 'Mea Culpa (Puglia)', description: 'Vino rosso corposo', price: '5.50' },
       { name: 'Pinot Nero (Alto Adige)', description: 'Rosso elegante', price: '5.50' },
       { name: 'Vermentino (Sardegna)', description: 'Bianco fresco e minerale', price: '5.00' },
-      { name: 'Forst Kronen alla spina', description: 'Piccola 0,2l / Media 0,4l', price: '3.00' },
+      { name: 'Forst Kronen alla spina', description: 'Media 0,4l', price: '4.00' },
       { name: 'Leffe Rossa alla spina', description: 'Media 0,33l', price: '5.00' },
       { name: 'Birra in bottiglia', description: "Beck's, Ceres, Corona", price: '4.00' },
     ],
@@ -102,6 +103,14 @@ export default function Menu() {
       { name: 'Sottobosco', description: 'Karkadè, uvetta, sambuco, mora, mirtillo, malva', price: '3.50' },
       { name: 'Fiocco di Neve', description: 'Mela, cannella, mandorle, cardamomo, pepe rosa', price: '3.50' },
       { name: 'Panna e Fragola', description: 'Karkadè, mela selvatica, rosa canina, fragola', price: '3.50' },
+    ],
+    pasticceria: [
+      { name: 'Brioche vuota', description: 'Sfornata fresca ogni mattina', price: '1.50' },
+      { name: 'Brioche farcita', description: 'Crema, cioccolato, marmellata o pistacchio', price: '1.50' },
+      { name: 'Cornetto integrale', description: 'Con miele o marmellata', price: '1.50' },
+      { name: 'Torte artigianali', description: 'Selezione del giorno', price: '4.00', tag: 'Fresca' },
+      { name: 'Muffin', description: 'Cioccolato o frutti di bosco', price: '2.50' },
+      { name: 'Crostata', description: 'Frutta fresca di stagione', price: '4.00' },
     ],
   }
 
@@ -258,7 +267,7 @@ export default function Menu() {
       {/* Immagine decorativa flottante */}
       <div
         ref={imageRef}
-        className="absolute top-[20%] right-[5%] w-[25vw] max-w-[300px] hidden lg:block z-base"
+        className="absolute top-[5%] right-[5%] w-[25vw] max-w-[300px] hidden lg:block pointer-events-none"
         style={{ transform: 'rotate(-5deg)' }}
       >
         <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '3/4' }}>
@@ -310,8 +319,8 @@ export default function Menu() {
         </div>
 
         {/* Category Tabs - stile irregolare */}
-        <div className="mb-12 md:mb-20">
-          <div className="flex flex-wrap gap-3 md:gap-6 md:ml-8">
+        <div className="mb-12 md:mb-20 relative z-10">
+          <div className="flex flex-wrap gap-2 md:gap-3">
             {categories.map((category, i) => (
               <button
                 key={category.id}
@@ -331,7 +340,7 @@ export default function Menu() {
                   {category.number}
                 </span>
                 <span
-                  className="block px-5 py-3 transition-all duration-400"
+                  className="block px-3 py-2 md:px-4 md:py-3 transition-all duration-400"
                   style={{
                     background: activeCategory === category.id ? 'var(--color-rust)' : 'transparent',
                     border: `1px solid ${activeCategory === category.id ? 'var(--color-rust)' : 'var(--color-text-muted)'}`,
