@@ -10,11 +10,12 @@ import menuImage from '../assets/foto/foto-7.webp'
 import sfondo3 from '../assets/sfondi/sfondi-3.webp'
 import sfondo4 from '../assets/sfondi/sfondi-4.webp'
 import sfondo5 from '../assets/sfondi/sfondi-5.webp'
+import listinoPDF from '../assets/LISTINO PIANTE_aggiunta anta_2026.pdf'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Menu() {
-  const [activeCategory, setActiveCategory] = useState('colazioni')
+  const [activeCategory, setActiveCategory] = useState('caffetteria')
   const sectionRef = useRef(null)
   const titleRef = useRef(null)
   const itemsRef = useRef(null)
@@ -22,41 +23,85 @@ export default function Menu() {
   const bigNumberRef = useRef(null)
 
   const categories = [
-    { id: 'colazioni', name: 'Colazioni', number: '01' },
-    { id: 'piatti-leggeri', name: 'Piatti Leggeri', number: '02' },
-    { id: 'piatti-caldi', name: 'Piatti Caldi', number: '03' },
-    { id: 'bevande', name: 'Bevande', number: '04' },
+    { id: 'caffetteria', name: 'Caffetteria', number: '01' },
+    { id: 'brunch', name: 'Brunch', number: '02' },
+    { id: 'pranzo', name: 'Pranzo', number: '03' },
+    { id: 'aperitivi', name: 'Aperitivi', number: '04' },
+    { id: 'cocktail', name: 'Cocktail', number: '05' },
+    { id: 'vini-birre', name: 'Vini & Birre', number: '06' },
+    { id: 'te-tisane', name: 'Tè & Tisane', number: '07' },
   ]
 
   const menuItems = {
-    colazioni: [
-      { name: 'Espresso Classico', description: 'Miscela 100% arabica selezionata', price: '1.20', tag: 'Bestseller' },
-      { name: 'Cappuccino', description: 'Espresso con latte montato a crema', price: '1.50' },
-      { name: 'Cornetto Artigianale', description: 'Sfogliato, vuoto o farcito', price: '1.30', tag: 'Fatto in casa' },
-      { name: 'Colazione Completa', description: 'Cappuccino + cornetto + spremuta', price: '5.50', tag: 'Consigliato' },
-      { name: 'Yogurt e Granola', description: 'Greco con miele e frutta fresca', price: '4.50' },
-      { name: 'Pancakes', description: "Soffici con sciroppo d'acero", price: '6.00' },
+    caffetteria: [
+      { name: 'Caffè liscio', description: 'Miscela selezionata', price: '1.30' },
+      { name: 'Cappuccino', description: 'Espresso con latte montato a crema', price: '1.60' },
+      { name: 'Caffè shakerato', description: 'Fresco e cremoso', price: '2.50' },
+      { name: 'Latte matcha', description: 'Tè verde giapponese con latte', price: '3.50' },
+      { name: 'Caffè marocchino', description: 'Caffè, cacao e schiuma di latte', price: '1.50' },
+      { name: 'Nutelcoffee', description: 'Caffè, nutella, panna montata', price: '3.00', tag: 'Speciale' },
+      { name: 'Pistacchietto', description: 'Caffè, pistacchio, panna montata', price: '3.50', tag: 'Speciale' },
+      { name: 'Cioccolata calda', description: 'Latte, fondente o bianca + aggiunte', price: '3.50' },
     ],
-    'piatti-leggeri': [
-      { name: 'Bagel Salmone', description: 'Con cream cheese, capperi e cipolla', price: '8.50', tag: 'Bestseller' },
-      { name: 'Club Sandwich', description: 'Pollo, bacon, uovo e verdure', price: '9.00' },
-      { name: 'Insalata Caesar', description: 'Lattuga, pollo grigliato, parmigiano', price: '10.00' },
-      { name: 'Poke Bowl', description: 'Salmone, avocado, edamame', price: '12.00', tag: 'Novità' },
-      { name: 'Bruschette Miste', description: 'Trio di bruschette del giorno', price: '7.00' },
+    brunch: [
+      { name: 'Bagel Mediterraneo', description: 'Prosciutto crudo, burrata, insalata, origano', price: '6.50' },
+      { name: 'Bagel Norvegese', description: 'Salmone, philadelphia, insalata', price: '7.00', tag: 'Bestseller' },
+      { name: 'Avocado Toast', description: 'Pane integrale, avocado, philadelphia, salmone, sesamo', price: '8.00' },
+      { name: 'Avocado Toast Vegano', description: 'Pane integrale, avocado, pomodorini, humus di ceci', price: '7.00' },
+      { name: 'Pancake pistacchio e lamponi', description: 'Soffici pancake con topping a scelta', price: '6.50' },
+      { name: 'Porridge', description: "Fiocchi d'avena con frutta e topping", price: '6.00' },
+      { name: 'Yogurt frutti rossi e granola', description: 'Bianco, cioccolato o pistacchio', price: '6.50' },
+      { name: 'Uovo', description: 'Due uova sbattute con fette di pane tostato', price: '6.00' },
     ],
-    'piatti-caldi': [
-      { name: 'Pinsa Margherita', description: 'Pomodoro San Marzano e bufala', price: '9.00', tag: 'Bestseller' },
-      { name: 'Pinsa Prosciutto', description: 'Crudo di Parma DOP e rucola', price: '11.00' },
-      { name: 'Tagliere del Corso', description: 'Salumi e formaggi locali', price: '14.00', tag: 'Da condividere' },
-      { name: 'Pasta del Giorno', description: 'Chiedi la specialità al nostro staff', price: '10.00' },
-      { name: 'Hamburger Gourmet', description: 'Manzo 180g, cheddar, bacon', price: '13.00' },
+    pranzo: [
+      { name: 'Pinsa Margherita', description: 'Pomodoro, mozzarella, origano', price: '8.00' },
+      { name: 'Pinsa Bologna & Burrata', description: 'Mortadella, burrata, granella di pistacchi', price: '9.50', tag: 'Consigliato' },
+      { name: 'Piadina Fresca', description: 'Cotto, fontina, insalata, maionese, pomodoro', price: '7.00' },
+      { name: 'Panino Corso', description: 'Mozzarella, prosciutto crudo, gamberetti salsa rosa', price: '8.00', tag: 'Speciale' },
+      { name: 'Panino Valdostano', description: 'Cotoletta, fontina, insalata, maionese', price: '8.00' },
+      { name: 'Insalatona Norvegese', description: 'Salmone, cipolle croccanti, carote, philadelphia', price: '12.00' },
+      { name: 'Tagliere di affettati grande', description: 'Salumi e formaggi selezionati', price: '20.00', tag: 'Da condividere' },
+      { name: 'Bresaola, rucola e grana', description: 'Piatto freddo classico', price: '12.00' },
     ],
-    bevande: [
-      { name: 'Spritz Aperol', description: "L'iconico aperitivo italiano", price: '5.00', tag: 'Aperitivo' },
-      { name: 'Negroni', description: 'Gin, Campari, vermut rosso', price: '6.00' },
-      { name: 'Vino della Casa', description: 'Selezione Franciacorta', price: '4.00' },
-      { name: 'Birra Artigianale', description: 'Selezione rotante alla spina', price: '5.00' },
-      { name: 'Smoothie Fresco', description: 'Frutta fresca a scelta', price: '5.50' },
+    aperitivi: [
+      { name: 'Spritz Aperol / Campari', description: "L'iconico aperitivo italiano", price: '6.00', tag: 'Aperitivo' },
+      { name: 'Spritz Hugo', description: 'Fresco con fiori di sambuco', price: '6.00' },
+      { name: 'Pirlo Aperol / Campari', description: 'Tradizione bresciana', price: '6.00' },
+      { name: 'Negroni', description: 'Martini rosso, bitter Campari, gin', price: '8.00' },
+      { name: 'Negroni Sbagliato', description: 'Martini rosso, bitter Campari, prosecco', price: '8.00' },
+      { name: 'Americano', description: 'Martini rosso, bitter Campari, seltz', price: '7.00' },
+      { name: 'Aperol Sour', description: 'Aperol, lime, sciroppo di zucchero', price: '6.00' },
+      { name: 'Analcolico della casa', description: 'Fresco e dissetante', price: '6.00' },
+    ],
+    cocktail: [
+      { name: 'Mojito', description: 'Rum bianco, zucchero di canna, lime, menta, seltz', price: '7.00', tag: 'Bestseller' },
+      { name: 'Moscow Mule', description: 'Vodka, lime, zenzero, ginger beer', price: '7.00' },
+      { name: 'Caipiroska alla fragola', description: 'Vodka, zucchero di canna, lime, fragole', price: '7.00' },
+      { name: 'Caipirinha', description: 'Cachaça, lime, zucchero di canna', price: '7.00' },
+      { name: 'Piña Colada', description: 'Rum bianco, succo d\'ananas, latte di cocco', price: '7.00' },
+      { name: 'Long Island', description: 'Tequila, vodka, rum, triple sec, gin, limone', price: '8.00' },
+      { name: 'Whiskey Sour', description: 'Whiskey, lime, zucchero di canna, albume', price: '8.00' },
+      { name: 'Sex on the Beach', description: 'Vodka alla pesca, vodka, granatina, succo d\'arancia', price: '7.00' },
+    ],
+    'vini-birre': [
+      { name: 'Franciacorta', description: 'Bollicine', price: '6.00', tag: 'Bollicine' },
+      { name: 'Prosecco (Treviso)', description: 'Bollicine fresche', price: '4.00' },
+      { name: 'Mea Culpa (Puglia)', description: 'Vino rosso corposo', price: '5.50' },
+      { name: 'Pinot Nero (Alto Adige)', description: 'Rosso elegante', price: '5.50' },
+      { name: 'Vermentino (Sardegna)', description: 'Bianco fresco e minerale', price: '5.00' },
+      { name: 'Forst Kronen alla spina', description: 'Piccola 0,2l / Media 0,4l', price: '3.00' },
+      { name: 'Leffe Rossa alla spina', description: 'Media 0,33l', price: '5.00' },
+      { name: 'Birra in bottiglia', description: "Beck's, Ceres, Corona", price: '4.00' },
+    ],
+    'te-tisane': [
+      { name: 'Camomilla', description: 'Classica e rilassante', price: '3.00' },
+      { name: 'Tè Bergamotto', description: 'Tè nero cinese con estratto naturale di bergamotto', price: '3.50' },
+      { name: 'Tè Marrakesh', description: 'Tè verde gunpowder e foglie di menta Nanah', price: '3.50' },
+      { name: 'Tè degli Amanti', description: 'Tè nero con petali di fiordaliso e cuori di zucchero', price: '3.50', tag: 'Speciale' },
+      { name: 'Arancia e Zenzero', description: 'Karkadè, mela, carota, bacche di goji, zenzero', price: '3.50' },
+      { name: 'Sottobosco', description: 'Karkadè, uvetta, sambuco, mora, mirtillo, malva', price: '3.50' },
+      { name: 'Fiocco di Neve', description: 'Mela, cannella, mandorle, cardamomo, pepe rosa', price: '3.50' },
+      { name: 'Panna e Fragola', description: 'Karkadè, mela selvatica, rosa canina, fragola', price: '3.50' },
     ],
   }
 
@@ -383,6 +428,42 @@ export default function Menu() {
         >
           * Prezzi e disponibilità possono variare. Chiedi al nostro staff per allergeni.
         </p>
+
+        {/* Bottone visualizza PDF */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href={listinoPDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-8 py-4 transition-all duration-400 hover:scale-105"
+            style={{
+              background: 'var(--color-rust)',
+              color: 'var(--color-text)',
+              border: '1px solid var(--color-rust)',
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            <span className="text-small" style={{ letterSpacing: '0.1em' }}>
+              Visualizza il Menù Completo
+            </span>
+          </a>
+        </div>
       </div>
 
       {/* Linea decorativa diagonale */}
