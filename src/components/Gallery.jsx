@@ -140,7 +140,7 @@ export default function Gallery() {
     <section
       ref={sectionRef}
       id="gallery"
-      className="relative py-32 md:py-48 overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
       style={{ background: 'var(--color-bg)' }}
     >
       {/* Sfondo FULL PAGE */}

@@ -137,7 +137,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-32 md:py-48 overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
       {/* Sfondo FULL PAGE */}
@@ -178,7 +178,7 @@ export default function About() {
         {/* Grid caotica */}
         <div className="grid grid-cols-12 gap-4">
           {/* Titolo - occupa colonne irregolari */}
-          <div className="col-span-12 md:col-span-8 md:col-start-4 mb-16 md:mb-24 relative z-content">
+          <div className="col-span-12 md:col-span-8 md:col-start-4 mb-10 md:mb-14 relative z-content">
             <div ref={titleRef}>
               <p
                 className="text-small mb-4"
@@ -271,7 +271,7 @@ export default function About() {
         </div>
 
         {/* Stats - posizionati in modo irregolare */}
-        <div className="mt-24 md:mt-32 grid grid-cols-3 gap-8 md:gap-16">
+        <div className="mt-16 md:mt-20 grid grid-cols-3 gap-8 md:gap-16">
           {[
             { value: '35+', label: 'Anni', offset: 0 },
             { value: '200+', label: 'Caffè/giorno', offset: 30 },
@@ -293,7 +293,7 @@ export default function About() {
         </div>
 
         {/* Storytelling - Due blocchi */}
-        <div className="mt-32 md:mt-48 space-y-24 md:space-y-32">
+        <div className="mt-20 md:mt-28 space-y-16 md:space-y-24">
           {/* Blocco 1 - La Veranda */}
           <div className="grid grid-cols-12 gap-6 md:gap-12 items-center">
             <div className="col-span-12 md:col-span-6 order-2 md:order-1">

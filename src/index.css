@@ -22,10 +22,10 @@
 
   /* Spacing fluido */
   --space-xs: clamp(0.5rem, 1vw, 0.75rem);
-  --space-sm: clamp(1rem, 2vw, 1.5rem);
-  --space-md: clamp(2rem, 4vw, 3rem);
-  --space-lg: clamp(4rem, 8vw, 6rem);
-  --space-xl: clamp(6rem, 12vw, 10rem);
+  --space-sm: clamp(0.75rem, 1.5vw, 1.25rem);
+  --space-md: clamp(1.5rem, 3vw, 2.5rem);
+  --space-lg: clamp(3rem, 6vw, 5rem);
+  --space-xl: clamp(5rem, 10vw, 8rem);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -68,7 +68,7 @@ body {
 
 .text-massive {
   font-family: var(--font-display);
-  font-size: clamp(5rem, 20vw, 18rem);
+  font-size: clamp(4rem, 15vw, 12rem);
   line-height: 0.8;
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -76,7 +76,7 @@ body {
 
 .text-giant {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 12vw, 10rem);
+  font-size: clamp(2.5rem, 10vw, 7rem);
   line-height: 0.85;
   font-weight: 400;
   letter-spacing: -0.04em;
@@ -84,7 +84,7 @@ body {
 
 .text-display {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
   line-height: 0.95;
   font-weight: 400;
   letter-spacing: -0.03em;
@@ -92,28 +92,28 @@ body {
 
 .text-headline {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
   line-height: 1.1;
   font-weight: 400;
 }
 
 .text-title {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
   line-height: 1.2;
   font-weight: 400;
 }
 
 .text-body-xl {
   font-family: var(--font-body);
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   line-height: 1.6;
   font-weight: 300;
 }
 
 .text-body {
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.9rem, 1vw, 1rem);
   line-height: 1.7;
   font-weight: 300;
 }

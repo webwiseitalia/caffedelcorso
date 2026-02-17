@@ -216,7 +216,7 @@ export default function Menu() {
     <section
       ref={sectionRef}
       id="menu"
-      className="relative py-32 md:py-48 overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
       style={{ background: 'var(--color-bg)' }}
     >
       {/* Sfondo FULL PAGE */}
@@ -267,7 +267,7 @@ export default function Menu() {
       {/* Immagine decorativa flottante */}
       <div
         ref={imageRef}
-        className="absolute top-[5%] right-[5%] w-[25vw] max-w-[300px] hidden lg:block pointer-events-none"
+        className="absolute top-[5%] right-[5%] w-[18vw] max-w-[220px] hidden lg:block pointer-events-none"
         style={{ transform: 'rotate(-5deg)' }}
       >
         <div className="overflow-hidden shadow-2xl" style={{ aspectRatio: '3/4' }}>
@@ -293,7 +293,7 @@ export default function Menu() {
 
       <div className="container-wide relative px-6 md:px-4">
         {/* Header con layout asimmetrico */}
-        <div className="grid grid-cols-12 gap-4 mb-16 md:mb-24">
+        <div className="grid grid-cols-12 gap-4 mb-8 md:mb-12">
           {/* Titolo - spostato */}
           <div className="col-span-12 md:col-span-7 md:col-start-2">
             <p

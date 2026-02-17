@@ -112,7 +112,7 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative py-32 md:py-48 overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
       {/* Sfondo FULL PAGE */}

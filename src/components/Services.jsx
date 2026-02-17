@@ -155,7 +155,7 @@ export default function Services() {
     <section
       ref={sectionRef}
       id="services"
-      className="relative py-32 md:py-48 overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
       style={{ background: 'var(--color-bg-cream)' }}
     >
       {/* Sfondo FULL PAGE */}
