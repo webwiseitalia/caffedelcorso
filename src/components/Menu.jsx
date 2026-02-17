@@ -4,13 +4,13 @@
  */
 
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import menuImage from '../assets/foto/foto-7.webp'
 import sfondo3 from '../assets/sfondi/sfondi-3.webp'
 import sfondo4 from '../assets/sfondi/sfondi-4.webp'
 import sfondo5 from '../assets/sfondi/sfondi-5.webp'
-import listinoPDF from '../assets/LISTINO PIANTE_aggiunta anta_2026.pdf'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -429,12 +429,10 @@ export default function Menu() {
           * Prezzi e disponibilità possono variare. Chiedi al nostro staff per allergeni.
         </p>
 
-        {/* Bottone visualizza PDF */}
+        {/* Bottone visualizza menù completo */}
         <div className="mt-10 flex justify-center">
-          <a
-            href={listinoPDF}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/menu-completo"
             className="group inline-flex items-center gap-3 px-8 py-4 transition-all duration-400 hover:scale-105"
             style={{
               background: 'var(--color-rust)',
@@ -462,7 +460,7 @@ export default function Menu() {
             <span className="text-small" style={{ letterSpacing: '0.1em' }}>
               Visualizza il Menù Completo
             </span>
-          </a>
+          </Link>
         </div>
       </div>
 

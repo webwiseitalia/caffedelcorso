@@ -6,6 +6,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookiePolicy from './pages/CookiePolicy'
 import EventiPrivati from './pages/EventiPrivati'
 import ColazioniBrunch from './pages/ColazioniBrunch'
+import MenuCompleto from './pages/MenuCompleto'
 import CookieBanner from './components/CookieBanner'
 
 // Componente per resettare lo scroll ad ogni cambio pagina
@@ -33,6 +34,7 @@ function App() {
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/eventi-privati" element={<EventiPrivati />} />
         <Route path="/colazioni-brunch" element={<ColazioniBrunch />} />
+        <Route path="/menu-completo" element={<MenuCompleto />} />
       </Routes>
     </Router>
   )
