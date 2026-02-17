@@ -1,12 +1,14 @@
 /**
  * Menu Completo Page
- * Pagina dedicata alla visualizzazione del listino completo in PDF
+ * Pagina dedicata alla visualizzazione del listino completo
  */
 
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import sfondo4 from '../assets/sfondi/sfondi-4.webp'
+import listinoPagina1 from '../assets/menu-listino-pagina-1.webp'
+import listinoPagina2 from '../assets/menu-listino-pagina-2.webp'
 import listinoPDF from '../assets/LISTINO PIANTE_aggiunta anta_2026.pdf'
 
 export default function MenuCompleto() {
@@ -89,38 +91,34 @@ export default function MenuCompleto() {
         </div>
       </section>
 
-      {/* PDF Viewer Section */}
+      {/* Menu Images Section */}
       <main className="relative py-12 md:py-20">
         <div className="container-wide px-6 md:px-4">
-          {/* PDF Embed */}
-          <div
-            className="w-full overflow-hidden shadow-2xl"
-            style={{ border: '1px solid var(--color-bg-warm)' }}
-          >
-            <iframe
-              src={`${listinoPDF}#toolbar=1&navpanes=0&scrollbar=1&view=FitH`}
-              title="Menù Completo - Caffè del Corso"
-              className="w-full"
-              style={{
-                height: '85vh',
-                minHeight: '600px',
-                border: 'none',
-              }}
-            />
+          {/* Listino images */}
+          <div className="space-y-8">
+            <div className="overflow-hidden shadow-2xl" style={{ border: '1px solid var(--color-bg-warm)' }}>
+              <img
+                src={listinoPagina1}
+                alt="Menù Caffè del Corso - Caffetteria, Tè, Tisane, Cocktail, Cioccolate, Caffè Speciali, Gin"
+                className="w-full h-auto"
+              />
+            </div>
+
+            <div className="overflow-hidden shadow-2xl" style={{ border: '1px solid var(--color-bg-warm)' }}>
+              <img
+                src={listinoPagina2}
+                alt="Menù Caffè del Corso - Brunch, Pranzo, Vini, Birre, Aperitivi, Bibite"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
-          {/* Fallback download link */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <p
-              className="text-body"
-              style={{ color: 'var(--color-text-muted)' }}
-            >
-              Non riesci a visualizzare il menù?
-            </p>
+          {/* Download PDF link */}
+          <div className="mt-12 flex justify-center">
             <a
               href={listinoPDF}
               download="Listino-Caffe-del-Corso-2026.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 px-8 py-4 transition-all duration-300 hover:scale-105"
               style={{
                 background: 'var(--color-rust)',
                 color: 'var(--color-text)',
@@ -141,7 +139,9 @@ export default function MenuCompleto() {
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              <span className="text-small">Scarica il PDF</span>
+              <span className="text-small" style={{ letterSpacing: '0.1em' }}>
+                Scarica il PDF
+              </span>
             </a>
           </div>
 
