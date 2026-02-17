@@ -8,7 +8,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import aboutImage from '../assets/foto/foto-11.webp'
 import chefImage from '../assets/foto/foto-13.webp'
-import verandaImage from '../assets/foto/foto-17.webp'
+import verandaImage from '../assets/foto/foto-20.webp'
 import internoImage from '../assets/foto/foto-15.webp'
 import sfondoAbout from '../assets/sfondi/sfondi-2.webp'
 
@@ -307,7 +307,7 @@ export default function About() {
                   title="La nostra veranda - Uno spazio verde e accogliente"
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  style={{ objectPosition: 'center top' }}
+                  style={{ objectPosition: 'center 30%' }}
                 />
               </div>
             </div>
