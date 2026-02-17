@@ -429,6 +429,10 @@ export default function Gallery() {
               <img
                 src={selectedImage.image}
                 alt={selectedImage.title}
+                title={selectedImage.title}
+                loading="eager"
+                width={800}
+                height={1000}
                 className="w-full h-auto max-h-[85vh] object-contain"
               />
               <p

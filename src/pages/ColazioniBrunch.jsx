@@ -254,6 +254,10 @@ export default function ColazioniBrunch() {
                 <img
                   src={heroColazione}
                   alt="Colazione al Caffè del Corso"
+                  title="Colazioni e brunch al Caffè del Corso"
+                  loading="eager"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -275,6 +279,10 @@ export default function ColazioniBrunch() {
                 <img
                   src={colazioneDolce}
                   alt="Colazione dolce italiana"
+                  title="La colazione dolce all'italiana"
+                  loading="lazy"
+                  width={600}
+                  height={750}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -350,6 +358,10 @@ export default function ColazioniBrunch() {
                 <img
                   src={pancakeFrutta}
                   alt="Pancake con frutta fresca"
+                  title="Il brunch della domenica con pancake"
+                  loading="lazy"
+                  width={600}
+                  height={750}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -366,6 +378,10 @@ export default function ColazioniBrunch() {
                 <img
                   src={verandaRelax}
                   alt="La veranda del Caffè del Corso"
+                  title="La veranda - Un posto dove stare bene"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -433,6 +449,10 @@ export default function ColazioniBrunch() {
               <img
                 src={colazioneAmiche}
                 alt="Colazione con amiche"
+                title="Momenti di colazione conviviale"
+                loading="lazy"
+                width={450}
+                height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -440,6 +460,10 @@ export default function ColazioniBrunch() {
               <img
                 src={colazioneConviviale}
                 alt="Momento conviviale"
+                title="Colazione insieme al Caffè del Corso"
+                loading="lazy"
+                width={450}
+                height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -447,6 +471,10 @@ export default function ColazioniBrunch() {
               <img
                 src={brunchPinsa}
                 alt="Brunch con pinsa"
+                title="Brunch con pinsa artigianale"
+                loading="lazy"
+                width={450}
+                height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -454,6 +482,10 @@ export default function ColazioniBrunch() {
               <img
                 src={brunchCompleto}
                 alt="Brunch completo"
+                title="Brunch completo della domenica"
+                loading="lazy"
+                width={450}
+                height={600}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>

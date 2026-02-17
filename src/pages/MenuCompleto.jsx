@@ -100,6 +100,10 @@ export default function MenuCompleto() {
               <img
                 src={listinoPagina1}
                 alt="Menù Caffè del Corso - Caffetteria, Tè, Tisane, Cocktail, Cioccolate, Caffè Speciali, Gin"
+                title="Listino Caffè del Corso - Pagina 1"
+                loading="eager"
+                width={2976}
+                height={1594}
                 className="w-full h-auto"
               />
             </div>
@@ -108,6 +112,10 @@ export default function MenuCompleto() {
               <img
                 src={listinoPagina2}
                 alt="Menù Caffè del Corso - Brunch, Pranzo, Vini, Birre, Aperitivi, Bibite"
+                title="Listino Caffè del Corso - Pagina 2"
+                loading="lazy"
+                width={2976}
+                height={1594}
                 className="w-full h-auto"
               />
             </div>

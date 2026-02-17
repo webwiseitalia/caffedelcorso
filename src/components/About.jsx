@@ -306,6 +306,8 @@ export default function About() {
                   alt="La veranda del Caffè del Corso"
                   title="La nostra veranda - Uno spazio verde e accogliente"
                   loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   style={{ objectPosition: 'center 30%' }}
                 />
@@ -379,6 +381,8 @@ export default function About() {
                   alt="Interno del Caffè del Corso"
                   title="Il nostro interno - Qualità e convivialità"
                   loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>

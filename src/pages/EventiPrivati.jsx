@@ -246,6 +246,10 @@ export default function EventiPrivati() {
                 <img
                   src={foto32}
                   alt="Eventi privati al Caffè del Corso"
+                  title="Eventi personalizzati al Caffè del Corso"
+                  loading="eager"
+                  width={800}
+                  height={1067}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -281,6 +285,10 @@ export default function EventiPrivati() {
                     <img
                       src={formula.image}
                       alt={formula.title}
+                      title={`${formula.title} - ${formula.subtitle}`}
+                      loading="lazy"
+                      width={800}
+                      height={600}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                       style={formula.rotateImage ? { transform: `rotate(${formula.rotateImage}deg) scale(1.4)` } : {}}
                     />

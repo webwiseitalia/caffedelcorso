@@ -116,6 +116,7 @@ export default function Hero({ lenis }) {
           title="Caffè del Corso - Il tuo bar di fiducia a Boario Terme"
           width={1920}
           height={1080}
+          loading="eager"
           className="w-full h-full object-cover"
           style={{ opacity: 0 }}
         />

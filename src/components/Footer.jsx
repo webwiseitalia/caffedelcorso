@@ -219,6 +219,7 @@ export default function Footer({ lenis }) {
           <div className="flex items-center gap-6">
             <Link
               to="/privacy-policy"
+              onClick={() => window.scrollTo(0, 0)}
               className="text-mono transition-colors hover:text-[var(--color-rust)]"
               style={{ color: 'var(--color-text-muted)', opacity: 0.6 }}
             >
@@ -226,6 +227,7 @@ export default function Footer({ lenis }) {
             </Link>
             <Link
               to="/cookie-policy"
+              onClick={() => window.scrollTo(0, 0)}
               className="text-mono transition-colors hover:text-[var(--color-rust)]"
               style={{ color: 'var(--color-text-muted)', opacity: 0.6 }}
             >
