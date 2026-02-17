@@ -320,7 +320,7 @@ export default function Menu() {
 
         {/* Category Tabs - stile irregolare */}
         <div className="mb-12 md:mb-20 relative z-10">
-          <div className="flex flex-wrap gap-2 md:gap-3">
+          <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
             {categories.map((category, i) => (
               <button
                 key={category.id}
