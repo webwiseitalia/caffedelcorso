@@ -105,12 +105,11 @@ export default function Menu() {
       { name: 'Panna e Fragola', description: 'Karkadè, mela selvatica, rosa canina, fragola', price: '3.50' },
     ],
     pasticceria: [
-      { name: 'Brioche vuota', description: 'Sfornata fresca ogni mattina', price: '1.50' },
-      { name: 'Brioche farcita', description: 'Crema, cioccolato, marmellata o pistacchio', price: '1.50' },
-      { name: 'Cornetto integrale', description: 'Con miele o marmellata', price: '1.50' },
-      { name: 'Torte artigianali', description: 'Selezione del giorno', price: '4.00', tag: 'Fresca' },
-      { name: 'Muffin', description: 'Cioccolato o frutti di bosco', price: '2.50' },
-      { name: 'Crostata', description: 'Frutta fresca di stagione', price: '4.00' },
+      { name: 'Brioches', description: 'Secondo disponibilità', price: '1.50' },
+      { name: 'Crostata della Nonna', description: 'Secondo disponibilità', price: '3.50' },
+      { name: 'Crostata vegana', description: 'Secondo disponibilità', price: '3.00' },
+      { name: 'Crostatine vegane', description: 'Secondo disponibilità', price: '3.00' },
+      { name: 'Tortine di mele (senza lattosio)', description: 'Secondo disponibilità', price: '3.50' },
     ],
   }
 
