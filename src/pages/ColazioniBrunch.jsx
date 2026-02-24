@@ -231,17 +231,14 @@ export default function ColazioniBrunch() {
                 className="animate-item text-body-xl mb-6"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                Dalla colazione veloce al bancone al brunch rilassato,
-                ogni giornata al Caffè del Corso è un'occasione per concedersi qualcosa di speciale.
+                Certo, facciamo anche cappuccino e brioche — ma il nostro brunch è un'altra cosa.
               </p>
 
               <p
                 className="animate-item text-body"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                Prodotti freschi selezionati, ricette curate con passione e un'atmosfera
-                che ti fa sentire a casa. Perché la colazione non è solo un pasto,
-                è il modo migliore per iniziare la giornata.
+                Pancake, porridge, avocado toast, uova e molto altro: ogni giorno, con prodotti selezionati e ricette curate. Un momento da prendersi con calma, senza fretta.
               </p>
             </div>
 
