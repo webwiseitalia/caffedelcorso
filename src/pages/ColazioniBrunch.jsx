@@ -135,8 +135,8 @@ export default function ColazioniBrunch() {
   const brunchFormule = [
     {
       title: 'CorsoBrunch',
-      subtitle: 'Il brunch completo della domenica',
-      description: 'Un\'esperienza completa con dolce e salato, perfetta per la domenica.',
+      subtitle: 'Il brunch completo',
+      description: 'Un\'esperienza completa con dolce e salato, perfetta per ogni occasione.',
       items: [
         'Pancake fantasia con frutta fresca',
         'Brioches e torte artigianali',
@@ -220,7 +220,7 @@ export default function ColazioniBrunch() {
 
               <h1
                 className="animate-item text-display mb-6"
-                style={{ color: 'var(--color-text-dark)' }}
+                style={{ color: 'var(--color-text)' }}
               >
                 Colazioni &{' '}
                 <span style={{ fontStyle: 'italic', color: 'var(--color-rust)' }}>
@@ -232,8 +232,8 @@ export default function ColazioniBrunch() {
                 className="animate-item text-body-xl mb-6"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                Dalla colazione veloce al bancone al brunch rilassato della domenica,
-                ogni mattina al Caffè del Corso è un'occasione per concedersi qualcosa di speciale.
+                Dalla colazione veloce al bancone al brunch rilassato,
+                ogni giornata al Caffè del Corso è un'occasione per concedersi qualcosa di speciale.
               </p>
 
               <p
@@ -325,29 +325,29 @@ export default function ColazioniBrunch() {
                 className="text-small mb-4"
                 style={{ color: 'var(--color-rust)' }}
               >
-                La domenica
+                Colazioni & Brunch
               </p>
               <h3
                 className="text-headline mb-6"
                 style={{ color: 'var(--color-text-dark)' }}
               >
-                Il brunch della{' '}
-                <em style={{ color: 'var(--color-rust)' }}>domenica</em>
+                Per ogni tipo di{' '}
+                <em style={{ color: 'var(--color-rust)' }}>mattina</em>
               </h3>
               <p
                 className="text-body-xl mb-4"
                 style={{ color: 'var(--color-text-dark)' }}
               >
-                Un rituale da condividere con chi ami.
+                Che tu abbia cinque minuti o tutta la mattina, qui c'è sempre qualcosa per te.
               </p>
               <p
                 className="text-body"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                La domenica mattina al Caffè del Corso diventa un momento speciale.
-                Pancake con frutta fresca, avocado toast, uova strapazzate con bacon,
-                spremute e centrifughe. Tutto servito con calma, per goderti ogni boccone
-                in compagnia.
+                Cappuccino e brioche fresca al volo, come nella migliore tradizione italiana,
+                oppure siediti e goditi un brunch completo: pancake, porridge, avocado toast
+                e molto altro. Ogni mattina al Caffè del Corso è un'occasione per concedersi
+                qualcosa di buono.
               </p>
             </div>
             <div className="col-span-12 md:col-span-6 md:col-start-7">
@@ -358,7 +358,7 @@ export default function ColazioniBrunch() {
                 <img
                   src={pancakeFrutta}
                   alt="Pancake con frutta fresca"
-                  title="Il brunch della domenica con pancake"
+                  title="Il nostro brunch con pancake"
                   loading="lazy"
                   width={600}
                   height={750}
@@ -438,7 +438,7 @@ export default function ColazioniBrunch() {
             <p className="text-small mb-4" style={{ color: 'var(--color-rust)' }}>
               I nostri momenti
             </p>
-            <h2 className="text-headline" style={{ color: 'var(--color-text-dark)' }}>
+            <h2 className="text-headline" style={{ color: 'var(--color-text)' }}>
               Ogni colazione racconta{' '}
               <em style={{ color: 'var(--color-rust)' }}>una storia</em>
             </h2>
@@ -482,7 +482,7 @@ export default function ColazioniBrunch() {
               <img
                 src={brunchCompleto}
                 alt="Brunch completo"
-                title="Brunch completo della domenica"
+                title="Il nostro brunch completo"
                 loading="lazy"
                 width={450}
                 height={600}
@@ -532,7 +532,7 @@ export default function ColazioniBrunch() {
                     <li key={i}>
                       <p
                         className="text-body font-medium"
-                        style={{ color: 'var(--color-text-dark)' }}
+                        style={{ color: 'var(--color-text)' }}
                       >
                         {item.name}
                       </p>
@@ -558,13 +558,13 @@ export default function ColazioniBrunch() {
             <p className="text-small mb-4" style={{ color: 'var(--color-rust)' }}>
               Per gruppi e occasioni speciali
             </p>
-            <h2 className="text-display" style={{ color: 'var(--color-text-dark)' }}>
+            <h2 className="text-display" style={{ color: 'var(--color-text)' }}>
               Formule{' '}
               <em style={{ color: 'var(--color-rust)' }}>Brunch</em>
             </h2>
             <p className="text-body mt-4 max-w-xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>
               Perfette per festeggiare un compleanno, una laurea o semplicemente
-              per passare una domenica speciale con gli amici.
+              per passare un momento speciale con gli amici.
             </p>
           </div>
 
@@ -606,9 +606,7 @@ export default function ColazioniBrunch() {
                 <h3
                   className="text-headline mb-4"
                   style={{
-                    color: formula.highlight
-                      ? 'var(--color-text)'
-                      : 'var(--color-text-dark)',
+                    color: 'var(--color-text)',
                   }}
                 >
                   {formula.title}
@@ -661,9 +659,7 @@ export default function ColazioniBrunch() {
                     <p
                       className="text-display"
                       style={{
-                        color: formula.highlight
-                          ? 'var(--color-text)'
-                          : 'var(--color-text-dark)',
+                        color: 'var(--color-text)',
                         fontFamily: 'var(--font-display)',
                       }}
                     >
@@ -706,7 +702,7 @@ export default function ColazioniBrunch() {
             style={{ color: 'rgba(254, 252, 232, 0.8)' }}
           >
             Colazioni servite dalle 7:30 alle 12:00.
-            Brunch della domenica su prenotazione.
+            Brunch disponibile tutti i giorni su prenotazione.
           </p>
 
           <p

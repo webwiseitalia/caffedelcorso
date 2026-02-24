@@ -384,6 +384,7 @@ export default function About() {
                   width={800}
                   height={600}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  style={{ objectPosition: 'center 35%' }}
                 />
               </div>
             </div>
