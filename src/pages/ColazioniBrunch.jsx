@@ -310,7 +310,7 @@ export default function ColazioniBrunch() {
                 className="text-body"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                Oltre alla classica colazione italiana, ogni giorno proponiamo un brunch completo: pancake, porridge, avocado toast, uova e molto altro. Prodotti selezionati, ricette curate, zero fretta.
+                Cappuccino e brioche al volo, come nella migliore tradizione italiana, oppure siediti e goditi un brunch completo: pancake, porridge, avocado toast e molto altro. Ogni mattina al Caffè del Corso è un'occasione per concedersi qualcosa di buono.
               </p>
             </div>
           </div>
