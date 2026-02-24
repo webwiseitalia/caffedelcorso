@@ -13,7 +13,6 @@ import colazioneAmiche from '../assets/new/new-2.webp'
 import colazioneConviviale from '../assets/new/new-3.webp'
 import brunchPinsa from '../assets/new/new-4.webp'
 import brunchCompleto from '../assets/new/new-5.webp'
-import colazioneDolce from '../assets/new/new-7.webp'
 import brunchBrindisi from '../assets/new/new-10.webp'
 import pancakeFrutta from '../assets/new/new-11.webp'
 import verandaRelax from '../assets/new/new-12.webp'
@@ -269,7 +268,7 @@ export default function ColazioniBrunch() {
       {/* Storytelling Section */}
       <section ref={storytellingRef} className="py-20 md:py-32" style={{ background: 'var(--color-bg-cream)' }}>
         <div className="container-wide px-6">
-          {/* Blocco 1 - La Colazione Italiana */}
+          {/* Blocco 1 - Colazioni & Brunch */}
           <div className="story-block grid grid-cols-12 gap-6 md:gap-12 items-center mb-20 md:mb-32">
             <div className="col-span-12 md:col-span-6 order-2 md:order-1">
               <div
@@ -277,9 +276,9 @@ export default function ColazioniBrunch() {
                 style={{ aspectRatio: '4/5', transform: 'rotate(-2deg)' }}
               >
                 <img
-                  src={colazioneDolce}
-                  alt="Colazione dolce italiana"
-                  title="La colazione dolce all'italiana"
+                  src={pancakeFrutta}
+                  alt="Colazione e brunch al Caffè del Corso"
+                  title="Colazioni e brunch - Dalla tradizione italiana al brunch completo"
                   loading="lazy"
                   width={600}
                   height={750}
@@ -288,39 +287,6 @@ export default function ColazioniBrunch() {
               </div>
             </div>
             <div className="col-span-12 md:col-span-5 md:col-start-8 order-1 md:order-2">
-              <p
-                className="text-small mb-4"
-                style={{ color: 'var(--color-rust)' }}
-              >
-                La tradizione
-              </p>
-              <h3
-                className="text-headline mb-6"
-                style={{ color: 'var(--color-text-dark)' }}
-              >
-                La colazione{' '}
-                <em style={{ color: 'var(--color-rust)' }}>all'italiana</em>
-              </h3>
-              <p
-                className="text-body-xl mb-4"
-                style={{ color: 'var(--color-text-dark)' }}
-              >
-                Cappuccino cremoso e cornetto fragrante: il classico intramontabile.
-              </p>
-              <p
-                className="text-body"
-                style={{ color: 'var(--color-text-muted)' }}
-              >
-                Ogni mattina i nostri cornetti arrivano freschi dal forno: vuoti, alla crema,
-                al cioccolato o alla marmellata. Il caffè? 100% arabica, tostato con cura
-                per un espresso dal gusto pieno e un cappuccino dalla schiuma perfetta.
-              </p>
-            </div>
-          </div>
-
-          {/* Blocco 2 - Il Brunch */}
-          <div className="story-block grid grid-cols-12 gap-6 md:gap-12 items-center mb-20 md:mb-32">
-            <div className="col-span-12 md:col-span-5 md:col-start-2">
               <p
                 className="text-small mb-4"
                 style={{ color: 'var(--color-rust)' }}
@@ -344,27 +310,8 @@ export default function ColazioniBrunch() {
                 className="text-body"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                Cappuccino e brioche fresca al volo, come nella migliore tradizione italiana,
-                oppure siediti e goditi un brunch completo: pancake, porridge, avocado toast
-                e molto altro. Ogni mattina al Caffè del Corso è un'occasione per concedersi
-                qualcosa di buono.
+                Oltre alla classica colazione italiana, ogni giorno proponiamo un brunch completo: pancake, porridge, avocado toast, uova e molto altro. Prodotti selezionati, ricette curate, zero fretta.
               </p>
-            </div>
-            <div className="col-span-12 md:col-span-6 md:col-start-7">
-              <div
-                className="overflow-hidden shadow-2xl"
-                style={{ aspectRatio: '4/5', transform: 'rotate(2deg)' }}
-              >
-                <img
-                  src={pancakeFrutta}
-                  alt="Pancake con frutta fresca"
-                  title="Il nostro brunch con pancake"
-                  loading="lazy"
-                  width={600}
-                  height={750}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
             </div>
           </div>
 
