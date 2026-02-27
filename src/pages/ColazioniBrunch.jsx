@@ -14,6 +14,7 @@ import colazioneConviviale from '../assets/new/new-3.webp'
 import brunchPinsa from '../assets/new/new-4.webp'
 import brunchCompleto from '../assets/new/new-5.webp'
 import brunchBrindisi from '../assets/new/new-10.webp'
+import colazioneDolce from '../assets/new/new-7.webp'
 import pancakeFrutta from '../assets/new/new-11.webp'
 import verandaRelax from '../assets/new/new-12.webp'
 import heroColazione from '../assets/foto/foto-10.webp'
@@ -273,9 +274,9 @@ export default function ColazioniBrunch() {
                 style={{ aspectRatio: '4/5', transform: 'rotate(-2deg)' }}
               >
                 <img
-                  src={pancakeFrutta}
+                  src={colazioneDolce}
                   alt="Colazione e brunch al Caffè del Corso"
-                  title="Colazioni e brunch - Dalla tradizione italiana al brunch completo"
+                  title="Colazioni e brunch al Caffè del Corso"
                   loading="lazy"
                   width={600}
                   height={750}
@@ -307,7 +308,7 @@ export default function ColazioniBrunch() {
                 className="text-body"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                Cappuccino e brioche al volo, come nella migliore tradizione italiana, oppure siediti e goditi un brunch completo: pancake, porridge, avocado toast e molto altro. Ogni mattina al Caffè del Corso è un'occasione per concedersi qualcosa di buono.
+                Oltre alla classica colazione all'italiana con brioches fresche e cappuccino cremoso, proponiamo un'ampia selezione di alternative moderne e nutrienti: pancake soffici, porridge, yogurt con frutta, avocado toast, centrifughe e spremute fresche e tante altre proposte pensate per chi ama iniziare la giornata con gusto ed energia.
               </p>
             </div>
           </div>
