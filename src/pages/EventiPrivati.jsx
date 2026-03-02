@@ -457,7 +457,7 @@ export default function EventiPrivati() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+390364793167"
+                href="tel:+3903641945781"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'var(--color-text)',
@@ -477,7 +477,7 @@ export default function EventiPrivati() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-title">Chiamaci: 0364 793167</span>
+                <span className="text-title">Chiamaci: 0364 1945781</span>
               </a>
 
               <a

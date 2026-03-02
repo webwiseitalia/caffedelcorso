@@ -121,11 +121,11 @@ export default function Footer({ lenis }) {
                 </p>
               </div>
               <a
-                href="tel:+390364793167"
+                href="tel:+3903641945781"
                 className="text-body block transition-colors hover:text-[var(--color-rust)]"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                +39 0364 793167
+                +39 0364 1945781
               </a>
               <a
                 href="mailto:info@caffedelcorso.it"

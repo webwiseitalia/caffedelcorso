@@ -45,9 +45,6 @@ export default function Menu() {
       { name: 'Cioccolata calda', description: 'Latte, fondente o bianca + aggiunte', price: '3.50' },
     ],
     brunch: [
-      { name: 'Bagel Mediterraneo', description: 'Prosciutto crudo, burrata, insalata, origano', price: '6.50' },
-      { name: 'Bagel Norvegese', description: 'Salmone, philadelphia, insalata', price: '7.00', tag: 'Bestseller' },
-      { name: 'Avocado Toast', description: 'Pane integrale, avocado, philadelphia, salmone, sesamo', price: '8.00' },
       { name: 'Avocado Toast Vegano', description: 'Pane integrale, avocado, pomodorini, humus di ceci', price: '7.00' },
       { name: 'Pancake pistacchio e lamponi', description: 'Soffici pancake con topping a scelta', price: '6.50' },
       { name: 'Porridge', description: "Fiocchi d'avena con frutta e topping", price: '6.00' },

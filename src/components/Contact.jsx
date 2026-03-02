@@ -202,11 +202,11 @@ export default function Contact() {
                   Telefono
                 </p>
                 <a
-                  href="tel:+390364793167"
+                  href="tel:+3903641945781"
                   className="text-display group-hover:text-[var(--color-rust)] transition-colors duration-300 inline-block"
                   style={{ color: 'var(--color-text-dark)', fontFamily: 'var(--font-display)' }}
                 >
-                  0364 793167
+                  0364 1945781
                 </a>
               </div>
 
@@ -265,7 +265,7 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href="https://wa.me/390364793167"
+                    href="https://wa.me/3903641945781"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-14 h-14 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-3"

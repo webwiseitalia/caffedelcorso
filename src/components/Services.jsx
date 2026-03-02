@@ -434,7 +434,7 @@ export default function Services() {
             </p>
 
             <a
-              href="tel:+390364793167"
+              href="tel:+3903641945781"
               className="group inline-flex items-center gap-6 self-start"
             >
               <span
@@ -461,7 +461,7 @@ export default function Services() {
                   className="block text-display"
                   style={{ color: 'var(--color-text-dark)', fontFamily: 'var(--font-display)' }}
                 >
-                  0364 793167
+                  0364 1945781
                 </span>
                 <span
                   className="text-small"

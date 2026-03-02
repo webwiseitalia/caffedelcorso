@@ -92,42 +92,111 @@ export default function ColazioniBrunch() {
 
   const colazioniMenu = [
     {
-      category: 'Colazioni Dolci',
+      category: 'Bagel',
       items: [
-        { name: 'Cornetto artigianale', desc: 'Vuoto, crema, cioccolato, marmellata' },
-        { name: 'Pancake fantasia', desc: 'Con frutta fresca, sciroppo d\'acero e panna' },
-        { name: 'French toast', desc: 'Con frutti di bosco e miele' },
-        { name: 'Bowl di yogurt', desc: 'Yogurt greco, granola, frutta fresca e miele' },
-        { name: 'Torta del giorno', desc: 'Fatta in casa ogni mattina' },
+        { name: 'Mediterraneo — €6,50', desc: 'Prosciutto crudo, burrata, insalata, origano' },
+        { name: 'Norvegese — €7,50', desc: 'Salmone, philadelphia, insalata' },
+        { name: 'Italiano — €6,50', desc: 'Prosciutto crudo, mozzarella, pesto' },
+        { name: 'Vegetariano — €6,00', desc: 'Capperi, pomodoro, feta, origano, insalata' },
       ],
     },
     {
-      category: 'Colazioni Salate',
+      category: 'Toastoni',
       items: [
-        { name: 'Avocado toast', desc: 'Pane tostato, avocado, uovo in camicia, semi' },
-        { name: 'Eggs Benedict', desc: 'Uova, bacon croccante, salsa olandese' },
-        { name: 'Toast al salmone', desc: 'Salmone affumicato, cream cheese, capperi' },
-        { name: 'Bagel farcito', desc: 'Con cream cheese, salmone o prosciutto' },
-        { name: 'Uova strapazzate', desc: 'Con bacon e pane tostato' },
+        { name: 'Toast — €4,00', desc: 'Cotto, fontina' },
+        { name: 'Avocado Toast — €8,00', desc: 'Pane integrale ai 5 cereali, avocado, philadelphia, salmone, semi di sesamo' },
+        { name: 'Avocado Toast Vegano — €7,00', desc: 'Pane integrale, avocado, pomodorini GP, cipolle croccanti, hummus di ceci, glassa di aceto balsamico' },
+        { name: 'Avoc\'ovo — €7,00', desc: 'Pane integrale, avocado, arance, semi' },
+        { name: 'Toastone — €7,00', desc: 'Pane integrale, bresaola, philadelphia, rucola, glassa aceto balsamico, papè' },
       ],
     },
     {
-      category: 'Bevande Calde',
+      category: 'Altro',
       items: [
-        { name: 'Espresso / Doppio', desc: 'Caffè 100% arabica' },
-        { name: 'Cappuccino', desc: 'Classico o con latte vegetale' },
-        { name: 'Caffè americano', desc: 'Lungo, cremoso e aromatico' },
-        { name: 'Tè e tisane', desc: 'Selezione premium Kusmi Tea' },
-        { name: 'Cioccolata calda', desc: 'Fondente o bianca' },
+        { name: 'Trancio di pizza — €3,50', desc: 'Pomodoro, mozzarella' },
+        { name: 'Uovo — €6,00', desc: 'Due uova sbattute con fette di pane tostato' },
       ],
     },
     {
-      category: 'Bevande Fresche',
+      category: 'Frutta & Centrifughe',
       items: [
-        { name: 'Spremuta d\'arancia', desc: 'Arance fresche spremute al momento' },
-        { name: 'Centrifughe', desc: 'Mix di frutta e verdura a scelta' },
-        { name: 'Succhi bio', desc: 'Mela, pera, pesca, albicocca' },
-        { name: 'Smoothie bowl', desc: 'Frutta fresca frullata con topping' },
+        { name: 'Bicchiere di frutta — da €5,00', desc: '' },
+        { name: 'Centrifuga — €6,00', desc: '' },
+        { name: 'Frullato — da €6,00', desc: '' },
+        { name: '', desc: 'Chiedi al nostro personale e scegli gli ingredienti che preferisci' },
+      ],
+    },
+    {
+      category: 'Yogurt',
+      items: [
+        { name: 'Bianco / Cioccolato / Pistacchio', desc: '' },
+        { name: 'Piccolo — €3,50', desc: '' },
+        { name: 'Grande — €5,00', desc: '' },
+        { name: 'Frutti rossi, granola — €6,50', desc: '' },
+        { name: 'Banana, noci, granola, cioccolato — €6,00', desc: '' },
+        { name: 'Banana, fragole, cioccolato — €6,00', desc: '' },
+        { name: 'Frutta mista — €6,00', desc: '' },
+        { name: 'Pistacchio, lamponi — €6,00', desc: '' },
+      ],
+    },
+    {
+      category: 'Pancake',
+      items: [
+        { name: 'Pistacchio e lamponi — €6,50', desc: '' },
+        { name: 'Cioccolato, noci, banana — €6,00', desc: '' },
+        { name: 'Sciroppo d\'acero, frutti rossi — €6,00', desc: '' },
+        { name: 'Cioccolato bianco, lamponi — €6,50', desc: '' },
+        { name: 'Marmellata frutti di bosco, frutta mista — €6,00', desc: '' },
+      ],
+    },
+    {
+      category: 'Porridge',
+      items: [
+        { name: 'Fiocchi d\'avena, lamponi, kiwi, marmellata frutti di bosco, cioccolato — €6,50', desc: '' },
+        { name: 'Fiocchi d\'avena, banana, noci, cioccolato a scaglie, burro d\'arachidi — €6,00', desc: '' },
+        { name: 'Fiocchi d\'avena, mela, cannella, noci, burro d\'arachidi — €6,00', desc: '' },
+      ],
+    },
+    {
+      category: 'Pranzo non Pranzo?',
+      items: [
+        { name: 'Piadina Fresca — €7,00', desc: 'Crudo, fontina, insalata, maionese, prezzomolo' },
+        { name: 'Piadina Crudo & fontina — €6,00', desc: '' },
+        { name: 'Piadina Cotto & fontina — €6,00', desc: '' },
+        { name: 'Pinsa Margherita — €8,00', desc: 'Pomodoro, mozzarella, origano' },
+        { name: 'Pinsa Bologna & burrata — €9,50', desc: 'Mortadella, burrata, granella di pistacchio' },
+        { name: 'Pinsa Crudo & burrata — €9,50', desc: 'Pomodoro, burrata, prosciutto crudo, origano' },
+      ],
+    },
+    {
+      category: 'Piatti Freddi',
+      items: [
+        { name: 'Tagliere di affettati', desc: '' },
+        { name: 'Medio — €15,00', desc: '' },
+        { name: 'Grande — €20,00', desc: '' },
+        { name: 'Crudo e melone — €8,00', desc: '' },
+        { name: 'Bresaola, rucola e grana — €12,00', desc: '' },
+      ],
+    },
+    {
+      category: 'Insalatone*',
+      items: [
+        { name: 'Classica — €9,00', desc: 'Insalata mista, tonno, mozzarella, mais' },
+        { name: 'Estiva — €10,00', desc: 'Insalata mista, pomodori, mozzarella, gamberetti salsa rosa' },
+        { name: 'Contadina — €10,00', desc: 'Insalata mista, pomodori, olive, mozzarella, cotoletta' },
+        { name: 'Greca — €10,00', desc: 'Insalata mista, cipolla, olive nere, pomodori, origano, cetrioli, feta' },
+        { name: 'Norvegese — €12,00', desc: 'Insalata mista, cipolle croccanti, salmone, carote, pomodoro, philadelphia' },
+        { name: '', desc: '* Tutte le insalate vengono accompagnate da deliziosi crostini' },
+      ],
+    },
+    {
+      category: 'Panini',
+      items: [
+        { name: 'Bologna — €6,50', desc: 'Mortadella, burrata, pistacchi' },
+        { name: 'Caprese — €7,00', desc: 'Pomodoro, mozzarella, origano' },
+        { name: 'Fresco — €7,00', desc: 'Crudo, fontina, maionese, insalata, prezzomolo' },
+        { name: 'Corso — €8,00', desc: 'Mozzarella, prosciutto crudo, gamberetti salsa rosa' },
+        { name: 'Valdostano — €8,00', desc: 'Cotoletta, fontina, insalata, maionese' },
       ],
     },
   ]
@@ -660,7 +729,7 @@ export default function ColazioniBrunch() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+390364793167"
+              href="tel:+3903641945781"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 transition-all duration-300 hover:scale-105"
               style={{
                 background: 'var(--color-text)',
@@ -680,7 +749,7 @@ export default function ColazioniBrunch() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span className="text-title">Prenota: 0364 793167</span>
+              <span className="text-title">Prenota: 0364 1945781</span>
             </a>
 
             <Link

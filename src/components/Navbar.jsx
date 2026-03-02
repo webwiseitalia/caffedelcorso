@@ -108,7 +108,7 @@ export default function Navbar({ lenis }) {
           {/* Right Side */}
           <div className="flex items-center gap-6">
             <a
-              href="tel:+390364793167"
+              href="tel:+3903641945781"
               className="hidden md:flex items-center gap-3 text-small"
               style={{ color: 'var(--color-text-muted)' }}
             >
@@ -116,7 +116,7 @@ export default function Navbar({ lenis }) {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ background: 'var(--color-rust)' }}
               />
-              0364 793167
+              0364 1945781
             </a>
 
             {/* Mobile Menu Button */}
@@ -214,11 +214,11 @@ export default function Navbar({ lenis }) {
                 style={{ borderColor: 'var(--color-bg-warm)' }}
               >
                 <a
-                  href="tel:+390364793167"
+                  href="tel:+3903641945781"
                   className="text-body block"
                   style={{ color: 'var(--color-text-muted)' }}
                 >
-                  +39 0364 793167
+                  +39 0364 1945781
                 </a>
                 <a
                   href="mailto:info@caffedelcorso.it"

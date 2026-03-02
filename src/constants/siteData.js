@@ -20,10 +20,10 @@ export const siteData = {
       country: 'Italia',
       full: 'Via Vittorio Montiglio, 1, 25047 Darfo Boario Terme (BS)',
     },
-    phone: '+39 0364 793167',
-    phoneDisplay: '0364 793167',
+    phone: '+39 0364 1945781',
+    phoneDisplay: '0364 1945781',
     email: 'info@caffedelcorso.it',
-    whatsapp: '+390364793167',
+    whatsapp: '+3903641945781',
   },
 
   // Social media
