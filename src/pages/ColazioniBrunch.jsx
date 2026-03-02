@@ -3,7 +3,7 @@
  * Pagina dedicata alle colazioni e brunch del locale
  */
 
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -26,6 +26,7 @@ import sfondo2 from '../assets/sfondi/sfondi-2.webp'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function ColazioniBrunch() {
+  const [openCategory, setOpenCategory] = useState(null)
   const sectionRef = useRef(null)
   const heroRef = useRef(null)
   const storytellingRef = useRef(null)
@@ -233,6 +234,7 @@ export default function ColazioniBrunch() {
       highlight: false,
     },
   ]
+
 
   return (
     <div ref={sectionRef} className="min-h-screen" style={{ background: 'var(--color-bg)' }}>
@@ -524,43 +526,72 @@ export default function ColazioniBrunch() {
             </p>
           </div>
 
-          <div ref={menuRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {colazioniMenu.map((section, index) => (
-              <div
-                key={index}
-                className="menu-card p-8 md:p-10"
-                style={{ background: 'var(--color-bg)' }}
-              >
-                <h3
-                  className="text-title mb-6 pb-4 border-b"
-                  style={{
-                    color: 'var(--color-rust)',
-                    borderColor: 'var(--color-bg-sand)',
-                  }}
+          <div ref={menuRef} className="max-w-3xl mx-auto">
+            {colazioniMenu.map((section, index) => {
+              const isOpen = openCategory === index
+              return (
+                <div
+                  key={index}
+                  className="border-b"
+                  style={{ borderColor: 'var(--color-bg-sand)' }}
                 >
-                  {section.category}
-                </h3>
+                  <button
+                    onClick={() => setOpenCategory(isOpen ? null : index)}
+                    className="w-full flex items-center justify-between py-5 md:py-6 text-left transition-colors duration-300 hover:opacity-80"
+                  >
+                    <h3
+                      className="text-title"
+                      style={{ color: 'var(--color-text-dark)' }}
+                    >
+                      {section.category}
+                    </h3>
+                    <svg
+                      className="w-5 h-5 flex-shrink-0 transition-transform duration-300"
+                      style={{
+                        color: 'var(--color-rust)',
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                      }}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-                <ul className="space-y-4">
-                  {section.items.map((item, i) => (
-                    <li key={i}>
-                      <p
-                        className="text-body font-medium"
-                        style={{ color: 'var(--color-text)' }}
-                      >
-                        {item.name}
-                      </p>
-                      <p
-                        className="text-small"
-                        style={{ color: 'var(--color-text-muted)' }}
-                      >
-                        {item.desc}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                  <div
+                    className="overflow-hidden transition-all duration-300"
+                    style={{
+                      maxHeight: isOpen ? `${section.items.length * 80}px` : '0px',
+                      opacity: isOpen ? 1 : 0,
+                    }}
+                  >
+                    <ul className="space-y-4 pb-6">
+                      {section.items.map((item, i) => (
+                        <li key={i}>
+                          {item.name && (
+                            <p
+                              className="text-body font-medium"
+                              style={{ color: 'var(--color-text-dark)' }}
+                            >
+                              {item.name}
+                            </p>
+                          )}
+                          {item.desc && (
+                            <p
+                              className="text-small"
+                              style={{ color: 'var(--color-text-muted)' }}
+                            >
+                              {item.desc}
+                            </p>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
