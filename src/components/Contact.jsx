@@ -206,24 +206,7 @@ export default function Contact() {
                   className="text-display group-hover:text-[var(--color-rust)] transition-colors duration-300 inline-block"
                   style={{ color: 'var(--color-text-dark)', fontFamily: 'var(--font-display)' }}
                 >
-                  0364 1945781
-                </a>
-              </div>
-
-              {/* Email */}
-              <div className="info-item group contact-offset-3">
-                <p
-                  className="text-small mb-3"
-                  style={{ color: 'var(--color-rust)' }}
-                >
-                  Email
-                </p>
-                <a
-                  href="mailto:info@caffedelcorso.it"
-                  className="text-headline group-hover:text-[var(--color-rust)] transition-colors duration-300 inline-block"
-                  style={{ color: 'var(--color-text-dark)' }}
-                >
-                  info@caffedelcorso.it
+                  0364 194 5781
                 </a>
               </div>
 

@@ -461,7 +461,7 @@ export default function Services() {
                   className="block text-display"
                   style={{ color: 'var(--color-text-dark)', fontFamily: 'var(--font-display)' }}
                 >
-                  0364 1945781
+                  0364 194 5781
                 </span>
                 <span
                   className="text-small"

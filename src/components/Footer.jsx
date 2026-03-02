@@ -125,14 +125,7 @@ export default function Footer({ lenis }) {
                 className="text-body block transition-colors hover:text-[var(--color-rust)]"
                 style={{ color: 'var(--color-text-muted)' }}
               >
-                +39 0364 1945781
-              </a>
-              <a
-                href="mailto:info@caffedelcorso.it"
-                className="text-body block transition-colors hover:text-[var(--color-rust)]"
-                style={{ color: 'var(--color-text-muted)' }}
-              >
-                info@caffedelcorso.it
+                +39 0364 194 5781
               </a>
             </div>
           </div>

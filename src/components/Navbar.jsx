@@ -116,7 +116,7 @@ export default function Navbar({ lenis }) {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ background: 'var(--color-rust)' }}
               />
-              0364 1945781
+              0364 194 5781
             </a>
 
             {/* Mobile Menu Button */}
@@ -218,14 +218,7 @@ export default function Navbar({ lenis }) {
                   className="text-body block"
                   style={{ color: 'var(--color-text-muted)' }}
                 >
-                  +39 0364 1945781
-                </a>
-                <a
-                  href="mailto:info@caffedelcorso.it"
-                  className="text-body block"
-                  style={{ color: 'var(--color-text-muted)' }}
-                >
-                  info@caffedelcorso.it
+                  +39 0364 194 5781
                 </a>
               </motion.div>
 
