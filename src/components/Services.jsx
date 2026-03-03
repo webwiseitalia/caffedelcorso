@@ -54,9 +54,9 @@ export default function Services() {
   ]
 
   const hours = [
-    { day: 'Lun — Ven', time: '07:00 — 22:00' },
-    { day: 'Sabato', time: '07:00 — 23:00' },
-    { day: 'Domenica', time: '08:00 — 21:30' },
+    { day: 'Lun — Gio', time: '07:00 — 21:00' },
+    { day: 'Ven — Sab', time: '07:00 — 23:00' },
+    { day: 'Domenica', time: '07:00 — 21:00' },
   ]
 
   useEffect(() => {

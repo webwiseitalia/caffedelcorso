@@ -47,9 +47,9 @@ export const siteData = {
 
   // Orari di apertura
   openingHours: [
-    { day: 'Lunedì - Venerdì', time: '07:00 - 22:00' },
-    { day: 'Sabato', time: '07:00 - 23:00' },
-    { day: 'Domenica', time: '08:00 - 21:30' },
+    { day: 'Lunedì - Giovedì', time: '07:00 - 21:00' },
+    { day: 'Venerdì - Sabato', time: '07:00 - 23:00' },
+    { day: 'Domenica', time: '07:00 - 21:00' },
   ],
 
   // Policy - date ultimo aggiornamento
