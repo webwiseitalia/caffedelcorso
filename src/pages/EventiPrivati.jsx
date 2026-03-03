@@ -450,9 +450,8 @@ export default function EventiPrivati() {
               className="text-body-xl max-w-2xl mx-auto mb-8"
               style={{ color: 'rgba(254, 252, 232, 0.8)' }}
             >
-              I prezzi indicati si riferiscono alle formule standard.
-              Per variazioni, esigenze particolari o menu personalizzati,
-              richiedi un preventivo: i costi possono variare in base alle modifiche.
+              Contattaci per organizzare il tuo evento su misura.
+              Menu personalizzati, esigenze particolari e ogni dettaglio curato insieme a te.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
